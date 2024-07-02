@@ -1331,16 +1331,23 @@ ol {
 
 .instagram-photo {
   overflow: hidden;
+  padding: 0px 10px;
+}
+
+.insta-reel {
+  width: 100%;
+  height: auto;
+  padding: 5px 8px;
+  border-radius: 15px;
 }
 
 .instagram-photo .insta-item {
   float: left;
   width: 16.66%;
-  height: 320px;
   text-align: center;
   position: relative;
 }
-
+/* 
 .instagram-photo .insta-item:hover:before {
   opacity: 1;
 }
@@ -1349,8 +1356,8 @@ ol {
   opacity: 1;
   visibility: visible;
   z-index: 99;
-}
-
+} */
+/* 
 .instagram-photo .insta-item:before {
   position: absolute;
   left: 0;
@@ -1388,7 +1395,7 @@ ol {
 
 .instagram-photo .insta-item .inside-text h5 a {
   color: #ffffff;
-}
+} */
 
 /*---------------------
   Latest Blog
@@ -1506,7 +1513,7 @@ ol {
 
 .about-us {
   padding: 0px 50px;
-  background-color: #FFFFED;
+  background-color: #ffffed;
   margin-bottom: 20px;
 }
 
@@ -4083,6 +4090,9 @@ ol {
   .nav-item .nav-menu li a {
     padding: 16px 10px 15px;
   }
+  .instagram-photo .insta-item {
+    width: 33.33333%;
+  }
   .instagram-photo .insta-item .inside-text h5 {
     font-size: 14px;
   }
@@ -4119,8 +4129,7 @@ ol {
   }
 
   .instagram-photo .insta-item {
-    width: 50%;
-    height: 300px;
+    width: 33.33333%;
   }
   .copyright-reserved .copyright-text {
     float: none;
