@@ -23,21 +23,3 @@
 .text-grey {
   color: #b2b2b2;
 }
-
-.header-ig-logo{
-  width: 14px;
-  height: 14px;
-  object-fit: cover;
-}
-
-.wp-footer-logo{
-  width: 13.8px;
-  height: 16px;
-  object-fit: cover;
-  margin-bottom: 4px;
-}
-
-.wp-footer-logo-block{
-  display: flex;
-  justify-content: center;
-}
