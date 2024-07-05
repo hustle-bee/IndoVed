@@ -1,4 +1,4 @@
-const primaryImage = document.getElementsByClassName("Primary-image");
+const primaryImage = document.getElementsByClassName("primary-image");
 
 const category = document.getElementsByClassName("catagory-name");
 
@@ -17,6 +17,6 @@ for (let i = 0; i < myProducts.length; i++) {
   priceObj.innerText = myProducts[i].price;
 
   let collectionObj = collection[i];
-  console.log(collectionObj);
+
   collectionObj.innerText = myProducts[i].collection;
 }
