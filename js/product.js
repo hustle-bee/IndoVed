@@ -1,220 +1,206 @@
 const myProducts = [
   {
-    primaryImage: "img/collection/indoved-saathi/Black/Primary image.jpg",
+    primaryImage: "https://i.ibb.co/y5bpWZr/Primary-image.jpg",
     price: "RS.550",
     collection: "SAATHI",
     category: "Short-Kurties",
   },
   {
-    primaryImage:
-      "img/collection/indoved-saathi/Blue ikat print/Primary image_.jpg",
+    primaryImage: "https://i.ibb.co/6Z2gDj3/Primary-image.jpg",
     price: "RS.550",
     collection: "SAATHI",
     category: "Short-Kurties",
   },
   {
-    primaryImage:
-      "img/collection/indoved-saathi/Blue back knots/Primary image_.jpg",
+    primaryImage: "https://i.ibb.co/4fVNRF6/Primary-image.jpg",
     price: "RS.550",
     collection: "SAATHI",
     category: "Short-Kurties",
   },
   {
-    primaryImage:
-      "img/collection/indoved-saathi/cream colour half sleeves/Primary image_.jpg",
+    primaryImage: "https://i.ibb.co/gjgQgCB/Primary-image.jpg",
     price: "RS.550",
     collection: "SAATHI",
     category: "Short-Kurties",
   },
   {
-    primaryImage:
-      "img/collection/indoved-saathi/Green baloon sleeves/Primary image_.jpg",
+    primaryImage: "https://i.ibb.co/D5NCRS4/Primary-image.jpg",
     price: "RS.550",
     collection: "SAATHI",
     category: "Short-Kurties",
   },
   {
-    primaryImage:
-      "img/collection/indoved-saathi/green camel print/Primary image_.jpg",
+    primaryImage: "https://i.ibb.co/4tRFZpZ/Primary-image.jpg",
     price: "RS.550",
     collection: "SAATHI",
     category: "Short-Kurties",
   },
   {
-    primaryImage: "img/collection/indoved-saathi/green knot/Primary image_.jpg",
+    primaryImage: "https://i.ibb.co/qNTXxmG/Primary-image.jpg",
     price: "RS.550",
     collection: "SAATHI",
     category: "Short-Kurties",
   },
   {
-    primaryImage:
-      "img/collection/indoved-saathi/Green one shoulder/Primary image_.jpg",
+    primaryImage: "https://i.ibb.co/4VdNzQt/Primary-image.jpg",
     price: "RS.550",
     collection: "SAATHI",
     category: "Short-Kurties",
   },
   {
-    primaryImage:
-      "img/collection/indoved-saathi/Orange bandhani/Primary image_.jpg",
+    primaryImage: "https://i.ibb.co/jwp8cdw/Primary-image.jpg",
     price: "RS.550",
     collection: "SAATHI",
     category: "Short-Kurties",
   },
   {
-    primaryImage: "img/collection/indoved-saathi/Orange collar/IMG_4553.jpg",
+    primaryImage: "https://i.ibb.co/tPtSXT8/Primary-image.jpg",
     price: "RS.550",
     collection: "SAATHI",
     category: "Short-Kurties",
   },
 
   {
-    primaryImage: "img/collection/indoved-saathi/Pink knots/Primary image_.jpg",
+    primaryImage: "https://i.ibb.co/xhNNMJK/Primary-image.jpg",
+    price: "RS.550",
+    collection: "SAATHI",
+    category: "Short-Kurties",
+  },
+  {
+    primaryImage: "https://i.ibb.co/XLCbcyB/Primary-image.jpg",
+    price: "RS.550",
+    collection: "SAATHI",
+    category: "Short-Kurties",
+  },
+  {
+    primaryImage: "https://i.ibb.co/9tQRZKr/IMG-4553.jpg",
+    price: "RS.550",
+    collection: "SAATHI",
+    category: "Short-Kurties",
+  },
+  {
+    primaryImage: "https://i.ibb.co/VLtQyMr/Primary-image.jpg",
+    price: "RS.550",
+    collection: "SAATHI",
+    category: "Short-Kurties",
+  },
+  {
+    primaryImage: "https://i.ibb.co/LCF2cPK/Primary-image.jpg",
+    price: "RS.550",
+    collection: "SAATHI",
+    category: "Short-Kurties",
+  },
+  {
+    primaryImage: "https://i.ibb.co/nPVxVNs/Primary-image.jpg",
+    price: "RS.550",
+    collection: "SAATHI",
+    category: "Short-Kurties",
+  },
+  {
+    primaryImage: "https://i.ibb.co/vh8CP9W/Primary-image.jpg",
+    price: "RS.550",
+    collection: "SAATHI",
+    category: "Short-Kurties",
+  },
+  {
+    primaryImage: "https://i.ibb.co/NmrvnnY/Primary-image.jpg",
     price: "RS.550",
     collection: "SAATHI",
     category: "Short-Kurties",
   },
   {
     primaryImage:
-      "img/collection/indoved-saathi/Pink plain sleeves/Primary image_.jpg",
-    price: "RS.550",
-    collection: "SAATHI",
-    category: "Short-Kurties",
-  },
-  {
-    primaryImage:
-      "img/collection/indoved-saathi/pink ruffle sleeves/Primary image_.jpg",
-    price: "RS.550",
-    collection: "SAATHI",
-    category: "Short-Kurties",
-  },
-  {
-    primaryImage:
-      "img/collection/indoved-saathi/red leheriya/Primary image_.jpg",
-    price: "RS.550",
-    collection: "SAATHI",
-    category: "Short-Kurties",
-  },
-  {
-    primaryImage: "img/collection/indoved-saathi/Red plain/Primary image_.jpg",
-    price: "RS.550",
-    collection: "SAATHI",
-    category: "Short-Kurties",
-  },
-  {
-    primaryImage:
-      "img/collection/indoved-saathi/Yellow alia cut/Primary image_.jpg",
-    price: "RS.550",
-    collection: "SAATHI",
-    category: "Short-Kurties",
-  },
-  {
-    primaryImage:
-      "img/collection/indoved-saathi/yellow floral print/Primary image_.jpg",
-    price: "RS.550",
-    collection: "SAATHI",
-    category: "Short-Kurties",
-  },
-  {
-    primaryImage:
-      "img/collection/indoved-saathi/Yellow overlap/Primary image_.jpg",
-    price: "RS.550",
-    collection: "SAATHI",
-    category: "Short-Kurties",
-  },
-  {
-    primaryImage:
-      "img/indoved-meraki/1 Pink one shoulder/1 pink shoulder Primary image_ meraki collection.jpg",
+      "https://i.ibb.co/N6QPcbK/1-pink-shoulder-Primary-image-meraki-collection.jpg",
     price: "RS.650",
     collection: "MERAKI",
     category: "Short-OnePiece",
   },
   {
     primaryImage:
-      "img/indoved-meraki/2 Cream dress/Primary image_ cream dress meraki.jpg",
+      "https://i.ibb.co/qy3FrX3/Primary-image-cream-dress-meraki.jpg",
     price: "RS.650",
     collection: "MERAKI",
     category: "Short-OnePiece",
   },
   {
     primaryImage:
-      "img/indoved-meraki/3 Black dress/Primary image_ black dress meraki.jpg",
+      "https://i.ibb.co/vPLcN1v/Primary-image-black-dress-meraki.jpg",
     price: "650",
     collection: "MERAKI",
     category: "Short-OnePiece",
   },
   {
     primaryImage:
-      "img/indoved-meraki/4 Brown dress/Primary image_ brown dress meraki.jpg",
+      "https://i.ibb.co/wJdZk1M/Primary-image-brown-dress-meraki.jpg",
     price: "RS.650",
     collection: "MERAKI",
     category: "Short-OnePiece",
   },
   {
     primaryImage:
-      "img/indoved-meraki/5 elephant dress/Primary image_ elephant dress meraki collection.jpg",
+      "https://i.ibb.co/82dxr1y/Primary-image-elephant-dress-meraki-collection.jpg",
     price: "RS.650",
     collection: "MERAKI",
     category: "Short-OnePiece",
   },
   {
     primaryImage:
-      "img/indoved-meraki/6 yellow dress/Primary image_ yellow dress meraki.jpg",
+      "https://i.ibb.co/27kBScc/Primary-image-yellow-dress-meraki.jpg",
     price: "RS.650",
     collection: "MERAKI",
     category: "Short-OnePiece",
   },
   {
     primaryImage:
-      "img/indoved-meraki/7 buddha dress/Primary image_ 7 buddha dress meraki.jpg",
+      "https://i.ibb.co/QCD7HrD/Primary-image-7-buddha-dress-meraki.jpg",
     price: "RS.650",
     collection: "MERAKI",
     category: "Short-OnePiece",
   },
   {
     primaryImage:
-      "img/indoved-meraki/8 Indigo dress/Primary image_ indigo dress meraki.jpg",
+      "https://i.ibb.co/J5zqVF8/Primary-image-indigo-dress-meraki.jpg",
     price: "RS.650",
     collection: "MERAKI",
     category: "Short-OnePiece",
   },
   {
     primaryImage:
-      "img/indoved-meraki/9 lavender dress/Primary image_ lavender dress meraki.jpg",
+      "https://i.ibb.co/TBjzvJC/Primary-image-lavender-dress-meraki.jpg",
     price: "RS.650",
     collection: "MERAKI",
     category: "Short-OnePiece",
   },
   {
     primaryImage:
-      "img/indoved-meraki/10 green dress/Primary image_green dress meraki.jpg",
+      "https://i.ibb.co/x2xt6YR/Primary-image-green-dress-meraki.jpg",
+    price: "RS.650",
+    collection: "MERAKI",
+    category: "Short-OnePiece",
+  },
+  {
+    primaryImage: "https://i.ibb.co/x8X0Tyf/Primary-image-red-dress-meraki.jpg",
     price: "RS.650",
     collection: "MERAKI",
     category: "Short-OnePiece",
   },
   {
     primaryImage:
-      "img/indoved-meraki/11 red dress/Primary image_ red dress meraki.jpg",
+      "https://i.ibb.co/Y2k5jJY/Primary-image-green-backless-dress-meraki.jpg",
     price: "RS.650",
     collection: "MERAKI",
     category: "Short-OnePiece",
   },
   {
     primaryImage:
-      "img/indoved-meraki/12 green backless dress/Primary image_ green backless dress meraki.jpg",
+      "https://i.ibb.co/31NxhVG/Primary-image-green-backless-dress-meraki.jpg",
     price: "RS.650",
     collection: "MERAKI",
     category: "Short-OnePiece",
   },
   {
     primaryImage:
-      "img/indoved-meraki/13 blue dress/Primary image_ blue dress meraki.jpg",
-    price: "RS.650",
-    collection: "MERAKI",
-    category: "Short-OnePiece",
-  },
-  {
-    primaryImage:
-      "img/indoved-meraki/14 specs dress/Primary image_ buddha dress meraki.jpg",
+      "https://i.ibb.co/7vtPxMM/Primary-image-buddha-dress-meraki.jpg",
     price: "RS.650",
     collection: "MERAKI",
     category: "Short-OnePiece",
