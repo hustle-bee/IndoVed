@@ -92,6 +92,13 @@
         throw (fetch("/cdn-cgi/zaraz/t"), e);
       }
     </script>
+    <style>
+      .icon_heart_alt {
+        background-color: lightcoral;
+        color: white;
+        padding: 10px 20px;
+      }
+    </style>
   </head>
   <body>
     <script src="./js/product.js"></script>
@@ -166,7 +173,12 @@
                   All Categories
                 </button>
                 <form action="#" class="input-group">
-                  <input type="text" placeholder="What do you need?" />
+                  <input
+                    id="myInput"
+                    type="text"
+                    onkeyup="filterProducts()"
+                    placeholder="What do you need?"
+                  />
                   <button type="button"><i class="ti-search"></i></button>
                 </form>
               </div>
@@ -175,12 +187,43 @@
               <ul class="nav-right">
                 <li class="heart-icon">
                   <a href="#">
-                    <i class="icon_heart_alt"></i>
+                    <i class="icon_heart_alt">
+                      <span
+                        style="
+                          position: absolute;
+                          top: -5px;
+                          right: -5px;
+                          color: white;
+                          border-radius: 50%;
+                          width: 20px;
+                          height: 20px;
+                          text-align: center;
+                          line-height: 20px;
+                          font-size: 12px;
+                        "
+                        >8</span
+                      >
+                    </i>
                   </a>
                 </li>
                 <li class="cart-icon">
                   <a href="#">
-                    <i class="icon_bag_alt"></i>
+                    <i class="icon_bag_alt">
+                      <span
+                        style="
+                          position: absolute;
+                          top: -5px;
+                          right: -5px;
+                          color: white;
+                          border-radius: 50%;
+                          width: 20px;
+                          height: 20px;
+                          text-align: center;
+                          line-height: 20px;
+                          font-size: 12px;
+                        "
+                      ></span>
+                    </i>
                   </a>
                   <div class="cart-hover">
                     <div class="select-items">
@@ -237,10 +280,24 @@
           <div class="nav-depart"></div>
           <nav class="nav-menu mobile-menu">
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="shop.html">Shop</a></li>
               <li>
-                <a href="#">Collection</a>
+                <a
+                  href="index.html"
+                  style="transform: scale(1.05); transition: 0.5s"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="shop.html"
+                  style="transform: scale(1.05); transition: 0.5s"
+                  >Shop</a
+                >
+              </li>
+              <li>
+                <a href="#" style="transform: scale(1.05); transition: 0.5s"
+                  >Collection</a
+                >
                 <ul class="dropdown">
                   <li>
                     <a onclick="filterCollection('Meraki')" href="#">Meraki</a>
@@ -254,9 +311,17 @@
                 </ul>
               </li>
 
-              <li><a href="contact.html">Contact</a></li>
               <li>
-                <a href="#">Pages</a>
+                <a
+                  href="contact.html"
+                  style="transform: scale(1.05); transition: 0.5s"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="#" style="transform: scale(1.05); transition: 0.5s"
+                  >Pages</a
+                >
                 <ul class="dropdown">
                   <li><a href="shopping-cart.html">Shopping Cart</a></li>
                   <li><a href="check-out.html">Checkout</a></li>
@@ -362,11 +427,19 @@
                       />
                       <div class="sale pp-sale"></div>
                       <div class="icon">
-                        <i class="icon_heart_alt"></i>
+                        <i
+                          class="icon_heart_alt"
+                          onclick="addToWishList(), updateWishListCount()"
+                        ></i>
                       </div>
                       <ul>
                         <li class="w-icon active">
-                          <a href="#"><i class="icon_bag_alt"></i></a>
+                          <a href="#"
+                            ><i
+                              class="icon_bag_alt"
+                              onclick="addToCart(), updateCartCount()"
+                            ></i
+                          ></a>
                         </li>
                         <li class="quick-view"><a href="#">+ Quick View</a></li>
                         <li class="w-icon">
@@ -395,11 +468,16 @@
                         alt
                       />
                       <div class="icon">
-                        <i class="icon_heart_alt"></i>
+                        <i
+                          class="icon_heart_alt"
+                          onclick="addToWishList(), updateWishListCount()"
+                        ></i>
                       </div>
                       <ul>
                         <li class="w-icon active">
-                          <a href="#"><i class="icon_bag_alt"></i></a>
+                          <a href="#"
+                            ><i class="icon_bag_alt" onclick="addToCart()"></i
+                          ></a>
                         </li>
                         <li class="quick-view"><a href="#">+ Quick View</a></li>
                         <li class="w-icon">
@@ -1771,8 +1849,8 @@
               <h5>Information</h5>
               <ul>
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">Checkout</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="check-out.html">Checkout</a></li>
+                <li><a href="contact.html">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -1781,9 +1859,9 @@
               <h5>My Account</h5>
               <ul>
                 <li><a href="#">My Account</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Shopping Cart</a></li>
-                <li><a href="#">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                <li><a href="shop.html">Shop</a></li>
               </ul>
             </div>
           </div>
@@ -1793,7 +1871,7 @@
                 Get E-mail updates about our latest shop and special offers.
               </p>
               <form action="#" class="subscribe-form">
-                <input type="text" placeholder="Enter Your Mail" />
+                <input type="email" placeholder="Enter Your Mail" />
                 <button type="button">Subscribe</button>
               </form>
             </div>

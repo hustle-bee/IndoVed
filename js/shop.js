@@ -140,3 +140,73 @@ function filterCategory(selectedValue) {
     allProducts = filterProducts;
   }
 }
+//add-to-cart
+var categoryName = document.querySelectorAll(".catagory-name");
+var cost = document.querySelectorAll(".product-price");
+var image = document.querySelectorAll(".primary-image");
+var collectionName = document.querySelectorAll(".product-name");
+const cart = [];
+const addToCart = () => {
+  for (var i = 0; i < 1; i++) {
+    cart.push(categoryName[i].innerText);
+    cart.push(cost[i].innerText);
+    cart.push(image[i].src);
+    cart.push(collectionName[i].innerHTML);
+  }
+  console.log(cart);
+};
+//update cart-count
+function updateCartCount() {
+  let cartCountElement = document.querySelector(".icon_bag_alt");
+  cartCountElement.textContent = cart.length;
+  return cart.length;
+}
+console.log(updateCartCount());
+
+//placeholder search
+function filterProducts() {
+  var input, filter, productList, products, productName, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  productList = document.querySelector(".product-list");
+  products = productList.getElementsByClassName("product-item");
+
+  for (i = 0; i < products.length; i++) {
+    productName = products[i].getElementsByClassName("product-name")[0];
+    txtValue = productName.textContent || productName.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      products[i].parentElement.style.display = "";
+    } else {
+      products[i].parentElement.style.display = "none";
+    }
+  }
+}
+
+//add-to-wishlist
+var categoryName = document.querySelectorAll(".catagory-name");
+var cost = document.querySelectorAll(".product-price");
+var image = document.querySelectorAll(".primary-image");
+var collectionName = document.querySelectorAll(".product-name");
+const wishlist = [];
+const addToWishList = () => {
+  for (var i = 0; i < 1; i++) {
+    wishlist.push(categoryName[i].innerText);
+    wishlist.push(cost[i].innerText);
+    wishlist.push(image[i].src);
+    wishlist.push(collectionName[i].innerHTML);
+  }
+  console.log(wishlist);
+};
+
+//update wishlist-count
+function updateWishListCount() {
+  const wishListCountElement = document.querySelector(".icon_heart_alt");
+  wishListCountElement.textContent = wishlist.length;
+  return wishlist.length;
+}
+
+//change wishlist icon colour
+const button = document.querySelector(".icon .icon_heart_alt");
+button.addEventListener("click", () => {
+  button.style.color = "red";
+});
