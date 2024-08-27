@@ -71,10 +71,19 @@ function addItemsToCart(event) {
     itemsAddedToCart.push(selectedProduct);
     //store add-items-to-cart in local storage
     localStorage.setItem("itemsAddedToCart", JSON.stringify(itemsAddedToCart));
+    // let cart = localStorage.getItem("itemsAddedToCart");
+    // console.log(cart);
+    // if (cart) {
+    //   let productItem = JSON.parse(cart);
+    //   console.log(productItem);
+    //   return cart;
+    // }
   }
 
   if (itemsAddedToCart.length) {
     cartCount.style.display = "flex";
+    console.log(cartCount);
+    cartCount.innerHTML = itemsAddedToCart.length; // Update the cart count
   }
   const cartItem = localStorage.getItem("itemsAddedToCart");
   if (cartItem) {
@@ -116,7 +125,6 @@ if (itemsAddedToWishList.length) {
 
 function addItemsToWishList(event) {
   console.log(event);
-  // Prevent default action if necessary
   event.preventDefault();
 
   // Get the clicked element
