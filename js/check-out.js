@@ -1,18 +1,12 @@
 var ordertable = localStorage.getItem("itemsAddedToCart");
-console.log(ordertable);
 if (ordertable) {
   var orderTableProduct = JSON.parse(ordertable);
-  console.log(orderTableProduct);
 }
 
 var productTable = document.getElementById("ordertable");
-console.log(productTable);
 orderTableProduct.forEach((product) => {
-  //console.log(productTable);
-  // productTable.innerHTML = "";
   const listItem = document.createElement("li");
 
-  // console.log(listItem);
   listItem.classList.add("fw-normal");
 
   listItem.innerHTML = `
@@ -32,10 +26,7 @@ if (orderTableProduct) {
   let total = 0;
   orderTableProduct.forEach((product) => {
     let price = parseInt(product.price.replace("RS.", ""));
-    console.log(price);
     total += price;
-    console.log(total);
   });
-  console.log(total);
   document.getElementById("total-price").textContent = `Total RS: ${total}`;
 }
