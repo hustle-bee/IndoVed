@@ -1,9 +1,7 @@
 let itemsAddedToCart = [];
 const storeValue = localStorage.getItem("itemsAddedToCart");
-console.log(storeValue);
 if (storeValue) {
   const storeItemValue = JSON.parse(storeValue);
-  console.log(storeItemValue);
   if (storeItemValue.length) {
     itemsAddedToCart = storeItemValue;
   } else {
@@ -12,7 +10,6 @@ if (storeValue) {
 }
 
 const cartButton = document.getElementById("badge-count-icon");
-console.log(cartButton);
 if (cartButton) {
   cartButton.innerHTML = itemsAddedToCart.length;
 } else {
@@ -53,33 +50,33 @@ myProducts.forEach((product) => {
     </div>
   `;
   // item.setAttribute('data-product-id', product.id);
-  // Append the new product item to the row
   productRow.appendChild(colDiv);
 });
 
 function addItemsToCart(event) {
-  // Prevent default action if necessary
   event.preventDefault();
 
-  // Get the clicked element
   const clickedElement = event.currentTarget;
 
-  // Retrieve the product ID from the data attribute
   const productId = clickedElement.closest(".product-item").dataset.productId;
   const selectedProduct = myProducts.find((product) => product.id == productId);
   if (selectedProduct) {
     itemsAddedToCart.push(selectedProduct);
-    //store add-items-to-cart in local storage
     localStorage.setItem("itemsAddedToCart", JSON.stringify(itemsAddedToCart));
+    // let cart = localStorage.getItem("itemsAddedToCart");
+    // if (cart) {
+    //   let productItem = JSON.parse(cart);
+    //   return cart;
+    // }
   }
 
   if (itemsAddedToCart.length) {
     cartCount.style.display = "flex";
+    cartCount.innerHTML = itemsAddedToCart.length;
   }
   const cartItem = localStorage.getItem("itemsAddedToCart");
   if (cartItem) {
     const storeItem = JSON.parse(cartItem);
-    console.log(storeItem);
     cartCount.innerHTML = storeItem.length;
   }
 }
@@ -88,10 +85,8 @@ function addItemsToCart(event) {
  */
 let itemsAddedToWishList = [];
 let wishlistValue = localStorage.getItem("itemsAddedToWishList");
-console.log(wishlistValue);
 if (wishlistValue) {
   let wishlistValueItem = JSON.parse(wishlistValue);
-  console.log(wishlistValueItem);
   if (wishlistValueItem.length) {
     itemsAddedToWishList = wishlistValueItem;
   } else {
@@ -99,7 +94,6 @@ if (wishlistValue) {
   }
 }
 const wishlistbtn = document.querySelector("#wishlist-count-icon");
-console.log(wishlistbtn);
 if (wishlistbtn) {
   wishlistbtn.innerHTML = itemsAddedToWishList.length;
 } else {
@@ -115,21 +109,14 @@ if (itemsAddedToWishList.length) {
 }
 
 function addItemsToWishList(event) {
-  console.log(event);
-  // Prevent default action if necessary
   event.preventDefault();
 
-  // Get the clicked element
   const clickedElement = event.currentTarget;
-  // Retrieve the product ID from the data attribute
   const productId = clickedElement.closest(".product-item").dataset.productId;
-  console.log(productId);
   const selectedProduct = myProducts.find((product) => product.id == productId);
-  console.log(selectedProduct);
   if (selectedProduct) {
     itemsAddedToWishList.push(selectedProduct);
   }
-  //store add-items-to-cart in local storage
   localStorage.setItem(
     "itemsAddedToWishList",
     JSON.stringify(itemsAddedToWishList)
@@ -141,19 +128,15 @@ function addItemsToWishList(event) {
   wishListCount.innerHTML = itemsAddedToWishList.length;
 }
 
-//filter the collection
 function filterCollection(selectedValue) {
   const filterProducts = myProducts.filter((element) => {
     return element.collection == selectedValue.toUpperCase();
   });
 
-  console.log("filterProducts", filterProducts);
   if (filterProducts.length) {
     const productRow = document.getElementById("product-row");
-    console.log("productRow", productRow);
     productRow.innerHTML = "";
     myProducts = filterProducts;
-    console.log("myProducts", myProducts);
     filterProducts.forEach((product) => {
       const singleProduct = `
       <div class="col-lg-4 col-sm-6">
@@ -194,13 +177,9 @@ function filterCategory(selectedValue) {
   let filterProducts = myProducts.filter((element) => {
     return element.category == selectedValue;
   });
-  console.log("filterProducts", filterProducts);
   if (filterProducts.length) {
     const productRow = document.getElementById("product-row");
-    console.log("productRow", productRow);
     productRow.innerHTML = "";
-    //myProducts = filterProducts;
-    console.log("myProducts", myProducts);
     filterProducts.forEach((product) => {
       const singleProductCategory = `
       <div class="col-lg-4 col-sm-6">
