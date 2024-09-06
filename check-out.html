@@ -387,32 +387,38 @@
 
                     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
                     <script>
-                      var options = {
-                        key: "rzp_test_kPmdPeUP513RlU", // Enter the Key ID generated from the Dashboard
-                        amount: "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-                        currency: "INR",
-                        name: "hustlebee softwares private limited", //your business name
-                        description: "Test Transaction",
-                        image:
-                          "https://cdn.razorpay.com/logos/F9Yhfb7ZXjXmIQ_medium.jpg",
-                        callback_url: "https://eneqd3r9zrjok.x.pipedream.net/",
-                        prefill: {
-                          //We recommend using the prefill parameter to auto-fill customer's contact information especially their phone number
-                          name: "girish Saundarkar", //your customer's name
-                          email: "gsaundarkar@gmail.com",
-                          contact: "9975520680",
-                        },
-
-                        notes: {
-                          address: "Razorpay Corporate Office",
-                        },
-                        theme: {
-                          color: "#3399cc",
-                        },
-                      };
-                      var rzp1 = new Razorpay(options);
                       document.getElementById("rzp-button1").onclick =
                         function (e) {
+                          let totalAmount =
+                            document
+                              .getElementById("total-price")
+                              .innerText.replace(/\D/g, "") * 100;
+
+                          var options = {
+                            key: "rzp_test_kPmdPeUP513RlU", // Enter the Key ID generated from the Dashboard
+                            amount: totalAmount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+                            currency: "INR",
+                            name: "IndoVed", //your business name
+                            description: "Test Transaction",
+                            image:
+                              "https://cdn.razorpay.com/logos/F9Yhfb7ZXjXmIQ_medium.jpg",
+                            callback_url:
+                              "https://eneqd3r9zrjok.x.pipedream.net/",
+                            prefill: {
+                              //We recommend using the prefill parameter to auto-fill customer's contact information especially their phone number
+                              name: "girish Saundarkar", //your customer's name
+                              email: "gsaundarkar@gmail.com",
+                              contact: "9975520680",
+                            },
+
+                            notes: {
+                              address: "Razorpay Corporate Office",
+                            },
+                            theme: {
+                              color: "#3399cc",
+                            },
+                          };
+                          var rzp1 = new Razorpay(options);
                           rzp1.open();
                           e.preventDefault();
                         };
