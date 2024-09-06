@@ -300,12 +300,12 @@
                 </div>
                 <div class="col-lg-12">
                   <label for="street">Street Address<span>*</span></label>
-                  <input type="text" id="street" class="street-first" />
-                  <input type="text" />
+                  <input type="text" id="street-1" class="street-first" />
+                  <input type="text" id="street-2" />
                 </div>
                 <div class="col-lg-12">
                   <label for="zip">Postcode / ZIP<span>*</span></label>
-                  <input type="text" id="zip" />
+                  <input type="number" id="zip" placeholder="000000" />
                 </div>
                 <div class="col-lg-12">
                   <label for="town">Town / City<span>*</span></label>
@@ -313,11 +313,11 @@
                 </div>
                 <div class="col-lg-6">
                   <label for="email">Email Address<span>*</span></label>
-                  <input type="text" id="email" />
+                  <input type="email" id="email" />
                 </div>
                 <div class="col-lg-6">
                   <label for="phone">Phone<span>*</span></label>
-                  <input type="text" id="phone" />
+                  <input type="tel" id="phone" placeholder=""/>
                 </div>
                 <div class="col-lg-12">
                   <div class="create-item">
@@ -376,7 +376,7 @@
                     >
                       Place Order
                     </button>
-
+                    <p id="validation-text"></p>
                     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
                     <script>
                       var options = {
@@ -402,10 +402,65 @@
                           color: "#3399cc",
                         },
                       };
+
+                      function isFormFilled() {
+                        var firstName = document.getElementById("fir").value;
+                        var lastName = document.getElementById("last").value;
+                        var address =
+                          document.getElementById("street-1").value +
+                          ", " +
+                          document.getElementById("street-2").value;
+                        var pincode = document.getElementById("zip").value;
+                        var city = document.getElementById("town").value;
+                        var email = document.getElementById("email").value;
+                        var phone = document.getElementById("phone").value;
+
+                        const billingDetails = {
+                          firstName,
+                          lastName,
+                          address,
+                          pincode,
+                          city,
+                          email,
+                          phone,
+                        };
+
+                        console.log("billingDetails: ", billingDetails);
+                        const emailPattern =
+                          /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                        if (
+                          !firstName ||
+                          !lastName ||
+                          !address ||
+                          !pincode ||
+                          !city ||
+                          !email ||
+                          !phone
+                        ) {
+                          document.getElementById(
+                            "validation-text"
+                          ).textContent = "Please fill all details.";
+                        } else if (!emailPattern.test(email)) {
+                          document.getElementById(
+                            "validation-text"
+                          ).textContent = "Please enter valid email.";
+                        } else {
+                          document.getElementById(
+                            "validation-text"
+                          ).textContent = "";
+                          return billingDetails;
+                        }
+
+                        return false;
+                      }
                       var rzp1 = new Razorpay(options);
                       document.getElementById("rzp-button1").onclick =
                         function (e) {
-                          rzp1.open();
+                          const formFilled = isFormFilled();
+                          if(formFilled){
+                            console.log("formFilled: ", formFilled);
+                            rzp1.open();
+                          }
                           e.preventDefault();
                         };
                     </script>
