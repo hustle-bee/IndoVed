@@ -406,10 +406,18 @@
                       function isFormFilled() {
                         var firstName = document.getElementById("fir").value;
                         var lastName = document.getElementById("last").value;
-                        var address =
-                          document.getElementById("street-1").value +
-                          ", " +
-                          document.getElementById("street-2").value;
+                        var address = document.getElementById("street-1").value;
+
+                        if (document.getElementById("street-2").value) {
+                          if (address) {
+                            address =
+                              address +
+                              ", " +
+                              document.getElementById("street-2").value;
+                          } else {
+                            address = document.getElementById("street-2").value;
+                          }
+                        }
                         var pincode = document.getElementById("zip").value;
                         var city = document.getElementById("town").value;
                         var email = document.getElementById("email").value;
@@ -457,7 +465,7 @@
                       document.getElementById("rzp-button1").onclick =
                         function (e) {
                           const formFilled = isFormFilled();
-                          if(formFilled){
+                          if (formFilled) {
                             console.log("formFilled: ", formFilled);
                             rzp1.open();
                           }
