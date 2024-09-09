@@ -317,7 +317,7 @@
                 </div>
                 <div class="col-lg-6">
                   <label for="phone">Phone<span>*</span></label>
-                  <input type="tel" id="phone" placeholder=""/>
+                  <input type="tel" id="phone" placeholder="" />
                 </div>
                 <div class="col-lg-12">
                   <div class="create-item">
@@ -379,94 +379,104 @@
                     <p id="validation-text"></p>
                     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
                     <script>
-                      var options = {
-                        key: "rzp_test_kPmdPeUP513RlU", // Enter the Key ID generated from the Dashboard
-                        amount: "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-                        currency: "INR",
-                        name: "hustlebee softwares private limited", //your business name
-                        description: "Test Transaction",
-                        image:
-                          "https://cdn.razorpay.com/logos/F9Yhfb7ZXjXmIQ_medium.jpg",
-                        callback_url: "https://eneqd3r9zrjok.x.pipedream.net/",
-                        prefill: {
-                          //We recommend using the prefill parameter to auto-fill customer's contact information especially their phone number
-                          name: "girish Saundarkar", //your customer's name
-                          email: "gsaundarkar@gmail.com",
-                          contact: "9975520680",
-                        },
-
-                        notes: {
-                          address: "Razorpay Corporate Office",
-                        },
-                        theme: {
-                          color: "#3399cc",
-                        },
-                      };
-
-                      function isFormFilled() {
-                        var firstName = document.getElementById("fir").value;
-                        var lastName = document.getElementById("last").value;
-                        var address = document.getElementById("street-1").value;
-
-                        if (document.getElementById("street-2").value) {
-                          if (address) {
-                            address =
-                              address +
-                              ", " +
-                              document.getElementById("street-2").value;
-                          } else {
-                            address = document.getElementById("street-2").value;
-                          }
-                        }
-                        var pincode = document.getElementById("zip").value;
-                        var city = document.getElementById("town").value;
-                        var email = document.getElementById("email").value;
-                        var phone = document.getElementById("phone").value;
-
-                        const billingDetails = {
-                          firstName,
-                          lastName,
-                          address,
-                          pincode,
-                          city,
-                          email,
-                          phone,
-                        };
-
-                        console.log("billingDetails: ", billingDetails);
-                        const emailPattern =
-                          /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-                        if (
-                          !firstName ||
-                          !lastName ||
-                          !address ||
-                          !pincode ||
-                          !city ||
-                          !email ||
-                          !phone
-                        ) {
-                          document.getElementById(
-                            "validation-text"
-                          ).textContent = "Please fill all details.";
-                        } else if (!emailPattern.test(email)) {
-                          document.getElementById(
-                            "validation-text"
-                          ).textContent = "Please enter valid email.";
-                        } else {
-                          document.getElementById(
-                            "validation-text"
-                          ).textContent = "";
-                          return billingDetails;
-                        }
-
-                        return false;
-                      }
-                      var rzp1 = new Razorpay(options);
                       document.getElementById("rzp-button1").onclick =
                         function (e) {
+                          let totalAmount =
+                            document
+                              .getElementById("total-price")
+                              .innerText.replace(/\D/g, "") * 100;
+
+                          var options = {
+                            key: "rzp_test_kPmdPeUP513RlU", // Enter the Key ID generated from the Dashboard
+                            amount: totalAmount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+                            currency: "INR",
+                            name: "IndoVed", //your business name
+                            description: "Test Transaction",
+                            image:
+                              "https://cdn.razorpay.com/logos/F9Yhfb7ZXjXmIQ_medium.jpg",
+                            callback_url:
+                              "https://eneqd3r9zrjok.x.pipedream.net/",
+                            prefill: {
+                              //We recommend using the prefill parameter to auto-fill customer's contact information especially their phone number
+                              name: "girish Saundarkar", //your customer's name
+                              email: "gsaundarkar@gmail.com",
+                              contact: "9975520680",
+                            },
+
+                            notes: {
+                              address: "Razorpay Corporate Office",
+                            },
+                            theme: {
+                              color: "#3399cc",
+                            },
+                          };
+
+                          function isFormFilled() {
+                            var firstName =
+                              document.getElementById("fir").value;
+                            var lastName =
+                              document.getElementById("last").value;
+                            var address =
+                              document.getElementById("street-1").value;
+
+                            if (document.getElementById("street-2").value) {
+                              if (address) {
+                                address =
+                                  address +
+                                  ", " +
+                                  document.getElementById("street-2").value;
+                              } else {
+                                address =
+                                  document.getElementById("street-2").value;
+                              }
+                            }
+                            var pincode = document.getElementById("zip").value;
+                            var city = document.getElementById("town").value;
+                            var email = document.getElementById("email").value;
+                            var phone = document.getElementById("phone").value;
+
+                            const billingDetails = {
+                              firstName,
+                              lastName,
+                              address,
+                              pincode,
+                              city,
+                              email,
+                              phone,
+                            };
+
+                            console.log("billingDetails: ", billingDetails);
+                            const emailPattern =
+                              /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                            if (
+                              !firstName ||
+                              !lastName ||
+                              !address ||
+                              !pincode ||
+                              !city ||
+                              !email ||
+                              !phone
+                            ) {
+                              document.getElementById(
+                                "validation-text"
+                              ).textContent = "Please fill all details.";
+                            } else if (!emailPattern.test(email)) {
+                              document.getElementById(
+                                "validation-text"
+                              ).textContent = "Please enter valid email.";
+                            } else {
+                              document.getElementById(
+                                "validation-text"
+                              ).textContent = "";
+                              return billingDetails;
+                            }
+
+                            return false;
+                          }
+                          var rzp1 = new Razorpay(options);
                           const formFilled = isFormFilled();
+                          console.log("formFilled: ", formFilled);
                           if (formFilled) {
-                            console.log("formFilled: ", formFilled);
                             rzp1.open();
                           }
                           e.preventDefault();
