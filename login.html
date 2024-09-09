@@ -173,14 +173,21 @@
             <div class="col-lg-3 text-right col-lg-3">
               <ul class="nav-right">
                 <li class="heart-icon">
-                  <a href="#">
+                  <a href="shopping-cart.html">
                     <i class="icon_heart_alt"></i>
+                    <span id="wishlist-count-icon" class="badge"></span>
                   </a>
                 </li>
                 <li class="cart-icon">
-                  <a href="#">
+                  <a href="check-out.html">
                     <i class="icon_bag_alt"></i>
                   </a>
+                  <div class="cart-icon">
+                    <i class="fa fa-shopping-cart"></i>
+                    <!-- Example icon -->
+                    <span id="badge-count-icon" class="badge"></span>
+                    <!-- Badge with count -->
+                  </div>
                   <div class="cart-hover">
                     <div class="select-items">
                       <table>
@@ -451,5 +458,6 @@
       data-cf-beacon='{"rayId":"8783f93fdd7885a5","b":1,"version":"2024.3.0","token":"cd0b4b3a733644fc843ef0b185f98241"}'
       crossorigin="anonymous"
     ></script>
+    <script src="./js/wishlist-cart-count.js"></script>
   </body>
 </html>
