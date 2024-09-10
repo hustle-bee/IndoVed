@@ -31,7 +31,7 @@ if (orderTableProduct) {
   document.getElementById("total-price").textContent = `Total RS: ${total}`;
 }
 
-//pop up
+// order placed pop up
 const openPopupBtn = document.getElementById("openPopupBtn");
 const popup = document.getElementById("popup");
 const closePopupBtn = document.getElementById("closePopupBtn");
@@ -47,5 +47,28 @@ closePopupBtn.addEventListener("click", () => {
 window.addEventListener("click", (event) => {
   if (event.target === popup) {
     popup.style.display = "none";
+  }
+});
+
+// order place failed pop up
+const openOrderFailedPopupBtn = document.getElementById(
+  "openOrderFailedPopupBtn"
+);
+const orderPlaceFailedPopup = document.getElementById("orderPlaceFailedPopup");
+const closeOrderFailedPopupBtn = document.getElementById(
+  "closeOrderFailedPopupBtn"
+);
+
+openOrderFailedPopupBtn.addEventListener("click", () => {
+  orderPlaceFailedPopup.style.display = "flex";
+});
+
+closeOrderFailedPopupBtn.addEventListener("click", () => {
+  orderPlaceFailedPopup.style.display = "none";
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target === orderPlaceFailedPopup) {
+    orderPlaceFailedPopup.style.display = "none";
   }
 });

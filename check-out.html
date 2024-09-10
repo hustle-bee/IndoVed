@@ -510,6 +510,11 @@
                             return false;
                           }
                           var rzp1 = new Razorpay(options);
+                          rzp1.on("payment.failed", function (failed) {
+                            document
+                              .getElementById("openOrderFailedPopupBtn")
+                              .click();
+                          });
                           const formFilled = isFormFilled();
                           console.log("formFilled: ", formFilled);
                           if (formFilled) {
@@ -540,6 +545,23 @@
           </p>
           <hr class="popup-hr" />
           <p class="popup-bottom-button" style="color: #5f8969">Home Page</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="openOrderFailedPopupBtn">
+      <div id="orderPlaceFailedPopup" class="order-placed-popup-overlay">
+        <div class="order-placed-popup-content">
+          <span class="close-order-placed-popup" id="closeOrderFailedPopupBtn"
+            >&times;</span
+          >
+          <h2 class="popup-headline">Whoops!</h2>
+          <p>
+            Your order had a little hiccup and is now sipping coffee with our
+            tech team. We’ll have it sorted out soon!
+          </p>
+          <hr class="popup-hr" />
+          <p class="popup-bottom-button" style="color: #5f8969">Close</p>
         </div>
       </div>
     </div>
