@@ -136,7 +136,7 @@ function filterCollection(selectedValue) {
   if (filterProducts.length) {
     const productRow = document.getElementById("product-row");
     productRow.innerHTML = "";
-    myProducts = filterProducts;
+    // myProducts = filterProducts;
     filterProducts.forEach((product) => {
       const singleProduct = `
       <div class="col-lg-4 col-sm-6">
