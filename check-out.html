@@ -93,7 +93,6 @@
       }
     </script>
     <style>
-      /* Pop-up overlay */
       .order-placed-popup-overlay {
         display: none;
         position: fixed;
@@ -107,7 +106,6 @@
         z-index: 1000;
       }
 
-      /* Pop-up content */
       .order-placed-popup-content {
         .popup-headline {
           margin-bottom: 12px;
@@ -126,7 +124,6 @@
         position: relative;
       }
 
-      /* Close button */
       .close-order-placed-popup {
         position: absolute;
         top: 10px;
@@ -561,13 +558,21 @@
           <span class="close-order-placed-popup" id="closeOrderFailedPopupBtn"
             >&times;</span
           >
+
           <h2 class="popup-headline">Whoops!</h2>
           <p>
             Your order had a little hiccup and is now sipping coffee with our
             tech team. We’ll have it sorted out soon!
           </p>
           <hr class="popup-hr" />
-          <p id="closeOrderFailedPopupBtn" class="popup-bottom-button" style="color: #5f8969">Close</p>
+          <p
+            id="closeOrderFailedPopupBtn2"
+            class="popup-bottom-button"
+            style="color: #5f8969"
+            onclick="closeOrderFailedPopup(event)"
+          >
+            Close
+          </p>
         </div>
       </div>
     </div>

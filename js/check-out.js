@@ -40,7 +40,8 @@ openPopupBtn.addEventListener("click", () => {
   popup.style.display = "flex";
 });
 
-closePopupBtn.addEventListener("click", () => {
+closePopupBtn.addEventListener("click", (event) => {
+  event.stopPropagation();
   popup.style.display = "none";
 });
 
@@ -63,9 +64,15 @@ openOrderFailedPopupBtn.addEventListener("click", () => {
   orderPlaceFailedPopup.style.display = "flex";
 });
 
-closeOrderFailedPopupBtn.addEventListener("click", () => {
+closeOrderFailedPopupBtn.addEventListener("click", (event) => {
+  event.stopPropagation();
   orderPlaceFailedPopup.style.display = "none";
 });
+
+function closeOrderFailedPopup(event) {
+  event.stopPropagation();
+  orderPlaceFailedPopup.style.display = "none";
+}
 
 window.addEventListener("click", (event) => {
   if (event.target === orderPlaceFailedPopup) {
