@@ -446,6 +446,7 @@
                             handler: async (transferred) => {
                               console.log("transferred: ", transferred);
                               document.getElementById("openPopupBtn").click();
+                              clearAddToCart();
                             },
                             notes: {
                               address: "Razorpay Corporate Office",
@@ -543,9 +544,11 @@
     <div id="openPopupBtn">
       <div id="popup" class="order-placed-popup-overlay">
         <div class="order-placed-popup-content">
-          <span class="close-order-placed-popup" id="closePopupBtn"
-            >&times;</span
-          >
+          <a href="index.html">
+            <span class="close-order-placed-popup" id="closePopupBtn"
+              >&times;</span
+            >
+          </a>
           <img class="order-place-icon" src="/img/imgs/order-placed.png" />
           <h2 class="popup-headline">Woohoo!</h2>
           <p>
