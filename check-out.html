@@ -131,6 +131,12 @@
         font-size: 18px;
         cursor: pointer;
       }
+
+      .order-place-icon {
+        width: 90px;
+        height: auto;
+        object-fit: cover;
+      }
     </style>
   </head>
   <body>
@@ -440,6 +446,7 @@
                             handler: async (transferred) => {
                               console.log("transferred: ", transferred);
                               document.getElementById("openPopupBtn").click();
+                              clearAddToCart();
                             },
                             notes: {
                               address: "Razorpay Corporate Office",
@@ -537,9 +544,12 @@
     <div id="openPopupBtn">
       <div id="popup" class="order-placed-popup-overlay">
         <div class="order-placed-popup-content">
-          <span class="close-order-placed-popup" id="closePopupBtn"
-            >&times;</span
-          >
+          <a href="index.html">
+            <span class="close-order-placed-popup" id="closePopupBtn"
+              >&times;</span
+            >
+          </a>
+          <img class="order-place-icon" src="https://hustle-bee.github.io/IndoVed/img/imgs/order-placed.png" />
           <h2 class="popup-headline">Woohoo!</h2>
           <p>
             Your order is set, and our team is prepping it like it’s a VIP
@@ -563,7 +573,7 @@
           <span class="close-order-placed-popup" id="closeOrderFailedPopupBtn"
             >&times;</span
           >
-
+          <img class="order-place-icon" src="https://hustle-bee.github.io/IndoVed/img/imgs/order-failed.png" />
           <h2 class="popup-headline">Whoops!</h2>
           <p>
             Your order had a little hiccup and is now sipping coffee with our

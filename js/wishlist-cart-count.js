@@ -53,3 +53,8 @@ if (itemsAddedToWishList.length) {
 } else {
   wishListCount.style.display = "none";
 }
+
+// clear add to cart
+function clearAddToCart() {
+  localStorage.setItem("itemsAddedToCart", []);
+}
