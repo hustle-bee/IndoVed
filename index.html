@@ -176,8 +176,15 @@
                   All Categories
                 </button>
                 <div class="input-group">
-                  <input type="text" placeholder="What do you need?" />
-                  <button type="button"><i class="ti-search"></i></button>
+                  <input
+                    id="searchbar-input"
+                    type="text"
+                    placeholder="What do you need?"
+                    style="color: #252525"
+                  />
+                  <button type="button" onclick="searchProducts()">
+                    <i class="ti-search"></i>
+                  </button>
                 </div>
               </div>
             </div>
@@ -282,101 +289,102 @@
       </div>
     </header>
 
-    <section class="hero-section">
-      <div class="hero-items owl-carousel">
-        <div
-          class="single-hero-items set-bg"
-          data-setbg="https://i.ibb.co/wJDw0fD/Mehek-Banner.png"
-        >
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-5">
-                <a href="#" class="primary-btn">Shop Now</a>
+    <div class="sections">
+      <section class="hero-section">
+        <div class="hero-items owl-carousel">
+          <div
+            class="single-hero-items set-bg"
+            data-setbg="https://i.ibb.co/wJDw0fD/Mehek-Banner.png"
+          >
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-5">
+                  <a href="#" class="primary-btn">Shop Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="single-hero-items set-bg"
+            data-setbg="https://i.ibb.co/ZzXKvr0/Meraki-banners.png"
+          >
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-5">
+                  <a href="#" class="primary-btn">Shop Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="single-hero-items set-bg"
+            data-setbg="https://i.ibb.co/JrVhQqS/Saathi-Banner.png"
+          >
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-5">
+                  <a href="#" class="primary-btn">Shop Now</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div
-          class="single-hero-items set-bg"
-          data-setbg="https://i.ibb.co/ZzXKvr0/Meraki-banners.png"
-        >
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-5">
-                <a href="#" class="primary-btn">Shop Now</a>
+      </section>
+
+      <div class="banner-section spad">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="single-banner">
+                <img src="https://i.ibb.co/tKqdn33/Meraki.png" alt />
+                <div class="inner-text">
+                  <h4>Meraki</h4>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          class="single-hero-items set-bg"
-          data-setbg="https://i.ibb.co/JrVhQqS/Saathi-Banner.png"
-        >
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-5">
-                <a href="#" class="primary-btn">Shop Now</a>
+            <div class="col-lg-4">
+              <div class="single-banner">
+                <img src="https://i.ibb.co/7NKkSRk/Mehek.png" alt />
+                <div class="inner-text">
+                  <h4>Mehek</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="single-banner">
+                <img src="https://i.ibb.co/jwk8mKZ/Saathi.png" alt />
+                <div class="inner-text">
+                  <h4>Saathi</h4>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <div class="banner-section spad">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="single-banner">
-              <img src="https://i.ibb.co/tKqdn33/Meraki.png" alt />
-              <div class="inner-text">
-                <h4>Meraki</h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="single-banner">
-              <img src="https://i.ibb.co/7NKkSRk/Mehek.png" alt />
-              <div class="inner-text">
-                <h4>Mehek</h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="single-banner">
-              <img src="https://i.ibb.co/jwk8mKZ/Saathi.png" alt />
-              <div class="inner-text">
-                <h4>Saathi</h4>
-              </div>
-            </div>
-          </div>
+      <section class="about-us">
+        <h1>About Us</h1>
+        <div>
+          <p>
+            Step into the world of IndoVed, where the elegance of Indian culture
+            blends with modern fashion. Our passion lies in providing women with
+            comfortable and chic clothing crafted entirely from soft, breathable
+            cotton. Inspired by the richness of Indian traditions, each piece is
+            thoughtfully designed to ensure both style and durability. We
+            believe that fashion should embrace diversity and empower women of
+            all ages and sizes. Our collections are curated to suit your style
+            and needs, whether you are looking something for a special occasion
+            or just updating your wardrobe.
+          </p>
+          <p>
+            Join our community and discover the perfect blend of tradition and
+            modernity at IndoVed. Feel free to reach out with any questions and
+            follow us on Instagram and Facebook for the latest updates.
+          </p>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <section class="about-us">
-      <h1>About Us</h1>
-      <div>
-        <p>
-          Step into the world of IndoVed, where the elegance of Indian culture
-          blends with modern fashion. Our passion lies in providing women with
-          comfortable and chic clothing crafted entirely from soft, breathable
-          cotton. Inspired by the richness of Indian traditions, each piece is
-          thoughtfully designed to ensure both style and durability. We believe
-          that fashion should embrace diversity and empower women of all ages
-          and sizes. Our collections are curated to suit your style and needs,
-          whether you are looking something for a special occasion or just
-          updating your wardrobe.
-        </p>
-        <p>
-          Join our community and discover the perfect blend of tradition and
-          modernity at IndoVed. Feel free to reach out with any questions and
-          follow us on Instagram and Facebook for the latest updates.
-        </p>
-      </div>
-    </section>
-
-    <!--
+      <!--
 <section class="women-banner spad">
 <div class="container-fluid">
 <div class="row">
@@ -644,36 +652,37 @@ $34.00
 </section>
 -->
 
-    <div class="instagram-photo">
-      <div class="insta-item">
-        <video class="insta-reel" autoplay loop muted playsinline>
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="insta-item">
-        <video class="insta-reel" autoplay loop muted playsinline>
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="insta-item">
-        <video class="insta-reel" autoplay loop muted playsinline>
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="insta-item">
-        <video class="insta-reel" autoplay loop muted playsinline>
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="insta-item">
-        <video class="insta-reel" autoplay loop muted playsinline>
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="insta-item">
-        <video class="insta-reel" autoplay loop muted playsinline>
-          Your browser does not support the video tag.
-        </video>
+      <div class="instagram-photo">
+        <div class="insta-item">
+          <video class="insta-reel" autoplay loop muted playsinline>
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="insta-item">
+          <video class="insta-reel" autoplay loop muted playsinline>
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="insta-item">
+          <video class="insta-reel" autoplay loop muted playsinline>
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="insta-item">
+          <video class="insta-reel" autoplay loop muted playsinline>
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="insta-item">
+          <video class="insta-reel" autoplay loop muted playsinline>
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="insta-item">
+          <video class="insta-reel" autoplay loop muted playsinline>
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </div>
 
@@ -964,6 +973,8 @@ May 4,2019
       data-cf-beacon='{"rayId":"8783f9076f1b3aa5","b":1,"version":"2024.3.0","token":"cd0b4b3a733644fc843ef0b185f98241"}'
       crossorigin="anonymous"
     ></script>
+    <script src="./js/product.js"></script>
+    <script src="./js/searchbar.js"></script>
     <script src="./js/wishlist-cart-count.js"></script>
   </body>
 </html>
