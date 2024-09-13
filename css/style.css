@@ -252,6 +252,10 @@ ol {
   display: none;
 }
 
+.sections{
+  display: block;
+}
+
 /*---------------------
   Header
 -----------------------*/
@@ -680,8 +684,7 @@ ol {
 }
 
 .nav-item {
-  background: #5f8969;
-  border: 3px solid #c96393;
+  background: #7EA087;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -791,7 +794,7 @@ ol {
   font-weight: 700;
   display: block;
   color: #ffffff;
-  border-right: 2px solid #3b3b3b;
+  /* border-right: 2px solid #3b3b3b; */
   text-transform: uppercase;
   padding: 16px 42px 15px;
   -webkit-transition: all 0.3s;
