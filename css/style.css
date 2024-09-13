@@ -252,6 +252,10 @@ ol {
   display: none;
 }
 
+.sections{
+  display: block;
+}
+
 /*---------------------
   Header
 -----------------------*/
