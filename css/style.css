@@ -252,7 +252,7 @@ ol {
   display: none;
 }
 
-.sections{
+.sections {
   display: block;
 }
 
@@ -684,7 +684,7 @@ ol {
 }
 
 .nav-item {
-  background: #7EA087;
+  background: #7ea087;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1557,7 +1557,7 @@ ol {
 -----------------------*/
 
 .footer-section {
-  background: #191919;
+  background: #fffdf3;
   padding-top: 75px;
 }
 
@@ -1624,7 +1624,7 @@ ol {
 }
 
 .footer-widget h5 {
-  color: #ffffff;
+  color: #252525;
   font-weight: 700;
   margin-bottom: 26px;
 }
@@ -1702,6 +1702,7 @@ ol {
 .copyright-reserved {
   border-top: 1px solid #303030;
   padding: 15px 0;
+  background-color: #fffdf3;
   /* margin-top: 45px; */
 }
 
