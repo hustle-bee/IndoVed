@@ -215,3 +215,28 @@ function filterCategory(selectedValue) {
     allProducts = filterProducts;
   }
 }
+
+// collection filter on load
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+const collectionFilter = getQueryParam("collection");
+
+if (collectionFilter) {
+  filterCollection(collectionFilter);
+}
+
+// set it this block at end of the file to remove all params after all operations done
+window.addEventListener("load", function () {
+  if (window.location.search.length > 0) {
+    const urlWithoutParams =
+      window.location.protocol +
+      "//" +
+      window.location.host +
+      window.location.pathname;
+
+    window.history.replaceState(null, "", urlWithoutParams);
+  }
+});
