@@ -135,7 +135,7 @@ let myProducts = [
   },
   {
     primaryImage:
-      "https://i.ibb.co/qy3FrX3/Primary-image-cream-dress-meraki.jpg",
+      "https://i.ibb.co/M6jHLKz/Primary-image-cream-dress-meraki.jpg",
     price: "RS.650",
     collection: "MERAKI",
     category: "Short Onepiece",
@@ -222,7 +222,7 @@ let myProducts = [
   },
   {
     primaryImage:
-      "https://i.ibb.co/31NxhVG/Primary-image-green-backless-dress-meraki.jpg",
+      "https://i.ibb.co/ThKr3QN/Primary-image-blue-dress-meraki.jpg",
     price: "RS.650",
     collection: "MERAKI",
     category: "Short Onepiece",

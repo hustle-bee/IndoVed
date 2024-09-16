@@ -33,7 +33,7 @@ myProducts.forEach((product) => {
   colDiv.innerHTML = `
     <div class="product-item" id="product-item" data-product-id="${product.id}">
       <div class="pi-pic">
-        <img class="primary-image" src="${product.primaryImage}" style="height:400px; width:400px" alt="${product.collection}"/>
+        <img class="primary-image" src="${product.primaryImage} ${product.collection}"/>
         <div class="sale pp-sale"></div>
         <div onclick= addItemsToWishList(event) class="icon"><i class="icon_heart_alt icon-heart-background" ></i></div>
         <ul>
