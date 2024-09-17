@@ -777,7 +777,13 @@ ol {
   display: inline-flex;
   position: relative;
 }
+.collection-hover a {
+  color: #000;
+}
 
+.single-hero-items {
+  margin: 70px;
+}
 .nav-item .nav-menu li {
   list-style: none;
   display: inline-block;
@@ -818,7 +824,7 @@ ol {
   top: 82px;
   width: 200px;
   z-index: 99;
-  background: #252525;
+  background: white;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.3s;
@@ -840,6 +846,7 @@ ol {
   border-right: 0;
   padding: 13px 20px 12px 30px;
   text-transform: capitalize;
+  color: #000;
 }
 
 /*---------------------
