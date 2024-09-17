@@ -16,7 +16,6 @@ if (cartButton) {
   itemsAddedToCart = [];
 }
 
-const productRow = document.getElementById("product-row");
 const cartCount = document.getElementById("badge-count-icon");
 if (itemsAddedToCart.length) {
   cartCount.style.display = "flex";
@@ -25,6 +24,7 @@ if (itemsAddedToCart.length) {
 }
 
 myProducts.forEach((product) => {
+  const productRow = document.getElementById("product-row");
   const colDiv = document.createElement("div");
   colDiv.classList.add("col-lg-4", "col-sm-6", "product-grid");
 
@@ -49,7 +49,6 @@ myProducts.forEach((product) => {
       </div>
     </div>
   `;
-  // item.setAttribute('data-product-id', product.id);
   productRow.appendChild(colDiv);
 });
 
@@ -136,38 +135,32 @@ function filterCollection(selectedValue) {
   if (filterProducts.length) {
     const productRow = document.getElementById("product-row");
     productRow.innerHTML = "";
-    // myProducts = filterProducts;
     filterProducts.forEach((product) => {
-      const singleProduct = `
-      <div class="col-lg-4 col-sm-6">
-                  <div class="product-item">
-                    <div class="pi-pic">
-                      <img class="primary-image" src="${product.primaryImage}" alt="">
-                      <div class="sale pp-sale"></div>
-                      <div class="icon">
-                        <i class="icon_heart_alt icon-heart-background"></i>
-                      </div>
-                      <ul>
-                        <li class="w-icon active">
-                          <a href="#"><i class="icon_bag_alt"></i></a>
-                        </li>
-                        <li class="quick-view"><a href="#">+ Quick View</a></li>
-                        <li class="w-icon">
-                          <a href="#"><i class="fa fa-random"></i></a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="pi-text">
-                      <div class="catagory-name">${product.category}</div>
-                      <a href="#">
-                        <h5 class="product-name">${product.collection}</h5>
-                      </a>
-                      <div class="product-price">${product.price}</div>
-                    </div>
-                  </div>
-                </div>`;
+      const colDiv = document.createElement("div");
+      colDiv.classList.add("col-lg-4", "col-sm-6", "product-grid");
 
-      productRow.insertAdjacentHTML("beforeend", singleProduct);
+      colDiv.dataset.productId = product.id;
+
+      colDiv.innerHTML = `
+    <div class="product-item" id="product-item" data-product-id="${product.id}">
+      <div class="pi-pic">
+        <img class="primary-image" src="${product.primaryImage} ${product.collection}"/>
+        <div class="sale pp-sale"></div>
+        <div onclick= addItemsToWishList(event) class="icon"><i class="icon_heart_alt icon-heart-background" ></i></div>
+        <ul>
+          <li onclick= addItemsToCart(event) class="w-icon active"><a><i class="icon_bag_alt"></i></a></li>
+          <li class="quick-view"><a href="#">+ Quick View</a></li>
+          <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
+        </ul>
+      </div>
+      <div class="pi-text">
+        <div class="catagory-name">${product.category}</div>
+        <a href="#"><h5 class="product-name">${product.collection}</h5></a>
+        <div class="product-price">${product.price}</div>
+      </div>
+    </div>
+  `;
+      productRow.appendChild(colDiv);
     });
   }
 }
@@ -181,36 +174,32 @@ function filterCategory(selectedValue) {
     const productRow = document.getElementById("product-row");
     productRow.innerHTML = "";
     filterProducts.forEach((product) => {
-      const singleProductCategory = `
-      <div class="col-lg-4 col-sm-6">
-                  <div class="product-item">
-                    <div class="pi-pic">
-                      <img class="primary-image" src="${product.primaryImage}" alt="">
-                      <div class="sale pp-sale"></div>
-                      <div class="icon">
-                        <i class="icon_heart_alt icon-heart-background"></i>
-                      </div>
-                      <ul>
-                        <li class="w-icon active">
-                          <a href="#"><i class="icon_bag_alt"></i></a>
-                        </li>
-                        <li class="quick-view"><a href="#">+ Quick View</a></li>
-                        <li class="w-icon">
-                          <a href="#"><i class="fa fa-random"></i></a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="pi-text">
-                      <div class="catagory-name">${product.category}</div>
-                      <a href="#">
-                        <h5 class="product-name">${product.collection}</h5>
-                      </a>
-                      <div class="product-price">${product.price}</div>
-                    </div>
-                  </div>
-                </div>`;
+      const colDiv = document.createElement("div");
+      colDiv.classList.add("col-lg-4", "col-sm-6", "product-grid");
 
-      productRow.insertAdjacentHTML("beforeend", singleProductCategory);
+      colDiv.dataset.productId = product.id;
+
+      colDiv.innerHTML = `
+    <div class="product-item" id="product-item" data-product-id="${product.id}">
+      <div class="pi-pic">
+        <img class="primary-image" src="${product.primaryImage} ${product.collection}"/>
+        <div class="sale pp-sale"></div>
+        <div onclick= addItemsToWishList(event) class="icon"><i class="icon_heart_alt icon-heart-background" ></i></div>
+        <ul>
+          <li onclick= addItemsToCart(event) class="w-icon active"><a><i class="icon_bag_alt"></i></a></li>
+          <li class="quick-view"><a href="#">+ Quick View</a></li>
+          <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
+        </ul>
+      </div>
+      <div class="pi-text">
+        <div class="catagory-name">${product.category}</div>
+        <a href="#"><h5 class="product-name">${product.collection}</h5></a>
+        <div class="product-price">${product.price}</div>
+      </div>
+    </div>
+  `;
+
+      productRow.appendChild(colDiv);
     });
     allProducts = filterProducts;
   }
