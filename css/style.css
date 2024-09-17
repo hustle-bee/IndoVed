@@ -847,7 +847,8 @@ ol {
 -----------------------*/
 
 .hero-items .single-hero-items {
-  height: 725px;
+  width: auto;
+  /* height: 725px; */
   padding-top: 210px;
 }
 
@@ -3986,9 +3987,15 @@ ol {
   .nav-item .nav-menu li a {
     padding: 16px 45px 15px;
   }
+  .single-hero-items {
+    height: 725px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
+  .single-hero-items {
+    height: 725px;
+  }
   .container {
     max-width: 1170px;
   }
@@ -3997,6 +4004,9 @@ ol {
 /* Medium Device: 1200px */
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .single-hero-items {
+    height: 600px;
+  }
   .inner-header .advanced-search .category-btn {
     max-width: 36%;
   }
@@ -4033,6 +4043,9 @@ ol {
 }
 
 @media only screen and (max-width: 991px) {
+  .single-hero-items {
+    height: 450px;
+  }
   .banner-section {
     padding: 80px 0 10px;
   }
@@ -4090,6 +4103,9 @@ ol {
 /* Tablet Device: 768px */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .single-hero-items {
+    height: 400px;
+  }
   .header-top .ht-right .login-panel {
     padding-left: 10px;
   }
@@ -4231,8 +4247,8 @@ ol {
   }
   .hero-items .single-hero-items {
     padding: 110px 25px 80px;
-    height: auto;
-    background: left center;
+    max-height: 230px;
+    background: round;
   }
   .hero-items .single-hero-items h1 {
     font-size: 40px;
