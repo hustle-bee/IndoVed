@@ -4167,6 +4167,10 @@ ol {
 /* Large Device: 480px */
 
 @media only screen and (max-width: 767px) {
+  .shop-now-button {
+    display: none;
+  }
+
   .about-us h1 {
     font-size: 40px;
   }
@@ -4305,6 +4309,10 @@ ol {
 /* Small Device: 320px */
 
 @media only screen and (max-width: 479px) {
+  .shop-now-button {
+    display: none;
+  }
+
   .instagram-photo .insta-item {
     width: 100%;
   }
