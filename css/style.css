@@ -777,13 +777,17 @@ ol {
   display: inline-flex;
   position: relative;
 }
-.collection-hover a {
+.collection-hover:hover {
+  color: #000;
+}
+.collection-item {
+  position: relative;
+}
+
+.collection-item:hover .collection-hover {
   color: #000;
 }
 
-.single-hero-items {
-  margin: 70px;
-}
 .nav-item .nav-menu li {
   list-style: none;
   display: inline-block;
@@ -857,6 +861,17 @@ ol {
   width: auto;
   /* height: 725px; */
   padding-top: 210px;
+  margin: 30px;
+}
+.hero-section {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.single-hero-items {
+  width: 100%;
+  height: auto;
+  background-size: cover;
 }
 
 .hero-items .single-hero-items span {
@@ -4252,6 +4267,15 @@ ol {
   .cart-table table tr th {
     font-size: 12px;
   }
+
+  .hero-section {
+    padding: 10px;
+  }
+  .single-hero-items {
+    width: 100%;
+    height: auto;
+  }
+
   .hero-items .single-hero-items {
     padding: 110px 25px 80px;
     max-height: 230px;
