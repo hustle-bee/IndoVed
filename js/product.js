@@ -244,7 +244,7 @@ let myProducts = [
     id: 33,
   },
   {
-    primaryImage: "https://i.ibb.co/VN73632/IMG-0122.jpg",
+    primaryImage: "https://i.ibb.co/NtStLGt/IMG-0122-2-optimized-200.jpg",
     price: "RS.750",
     collection: "MEHEK",
     category: "Short Onepiece",
