@@ -15,7 +15,7 @@ let myProducts = [
   },
   {
     id: 3,
-    primaryImage: "https://i.ibb.co/ChQw18R/3-cream-dress.jpg",
+    primaryImage: "https://i.ibb.co/5BL1M4b/3-cream-dress.jpg",
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
@@ -30,7 +30,7 @@ let myProducts = [
   },
   {
     id: 5,
-    primaryImage: "https://i.ibb.co/q1v7RDc/4-green-knot-dress.jpg",
+    primaryImage: "https://i.ibb.co/12k790P/4-green-knot-dress.jpg",
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
