@@ -16,10 +16,21 @@ orderTableProduct.forEach((product) => {
       <div class="pi-text" style="display:flex; justify-content:space-between; align-items:center;" >
         <div class="catagory-name" style=" display:block;text-align:left;padding:5px; margin:left; ">${product.category}</div>
         <div class="product-price" style=" text-align:right; font-size:15px ;">${product.price}</div>
+        <div><button class="remove-btn" data-product-id="${product.id}">Remove</button></div>
       </div>
     </div>
   `;
   productTable.appendChild(listItem);
+});
+document.addEventListener("click", function (e) {
+  if (e.target && e.target.classList.contains("remove-btn")) {
+    const productId = parseInt(e.target.getAttribute("data-product-id"));
+    const index = e.target.getAttribute("data-index");
+    orderTableProduct.splice(index, 1);
+    localStorage.setItem("itemsAddedToCart", JSON.stringify(orderTableProduct));
+    e.target.closest("li").remove();
+    console.log("Item removed from cart");
+  }
 });
 
 if (orderTableProduct) {
@@ -79,3 +90,5 @@ window.addEventListener("click", (event) => {
     orderPlaceFailedPopup.style.display = "none";
   }
 });
+
+// Retrieve the cart data from localStorage
