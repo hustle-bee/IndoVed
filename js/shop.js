@@ -56,6 +56,7 @@ function addItemsToCart(event) {
   event.preventDefault();
 
   const clickedElement = event.currentTarget;
+  console.log('clickedElement: ', clickedElement);
 
   const productId = clickedElement.closest(".product-item").dataset.productId;
   const selectedProduct = myProducts.find((product) => product.id == productId);
