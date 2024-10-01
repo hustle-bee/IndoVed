@@ -684,7 +684,10 @@ ol {
   padding: 15px 30px 12px;
   margin-bottom: 10px;
 }
-
+.checkout-btn{
+  width: 100%;
+  text-align: center;
+}
 .inner-header .nav-right li.cart-icon .cart-hover .select-button .checkout-btn {
   font-size: 12px;
   letter-spacing: 2px;
