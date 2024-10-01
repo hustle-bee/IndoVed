@@ -5,6 +5,13 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    imgs: [
+      "https://i.ibb.co/xFHNfpy/2.jpg",
+      "https://i.ibb.co/9TD2kHv/1-black-dress.jpg",
+      "https://i.ibb.co/ChQw18R/3-cream-dress.jpg",
+      "https://i.ibb.co/6Rq0mVB/5.jpg",
+      "https://i.ibb.co/vZGQRjC/8-pink-ruffledress.jpg",
+    ],
   },
   {
     id: 2,

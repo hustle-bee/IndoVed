@@ -1,28 +1,31 @@
-myProducts.forEach((product) => {
-  const productRow = document.getElementById("product-row");
-  const colDiv = document.createElement("div");
-  colDiv.classList.add("col-lg-4", "col-sm-6", "product-grid");
+const indicatorsContainer = document.getElementById("carousel-indicators");
+const totalSlides = myProducts[0].imgs.length;
 
-  colDiv.dataset.productId = product.id;
+for (let i = 0; i < totalSlides; i++) {
+  const indicatorButton = document.createElement("button");
+  indicatorButton.type = "button";
+  indicatorButton.setAttribute("data-bs-target", "#carouselExampleIndicators");
+  indicatorButton.setAttribute("data-bs-slide-to", i);
+  indicatorButton.setAttribute("aria-label", `Slide ${i + 1}`);
+  
+  if (i === 0) {
+    indicatorButton.classList.add("active");
+    indicatorButton.setAttribute("aria-current", "true");
+  }
 
-  colDiv.innerHTML = `
-    <div class="product-item" id="product-item" data-product-id="${product.id}">
-      <div class="pi-pic">
-        <img class="primary-image" src="${product.primaryImage} ${product.collection}"/>
-        <div class="sale pp-sale"></div>
-        <div onclick= addItemsToWishList(event) class="icon"><i class="icon_heart_alt icon-heart-background" ></i></div>
-        <ul>
-          <li onclick= addItemsToCart(event) class="w-icon active"><a><i class="icon_bag_alt"></i></a></li>
-          <li class="quick-view"><a href="quick-view.html">+ Quick View</a></li>
-          <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
-        </ul>
-      </div>
-      <div class="pi-text">
-        <div class="catagory-name">${product.category}</div>
-        <a href="#"><h5 class="product-name">${product.collection}</h5></a>
-        <div class="product-price">${product.price}</div>
-      </div>
-    </div>
-  `;
-  productRow.appendChild(colDiv);
+  indicatorsContainer.appendChild(indicatorButton);
+}
+
+const slides = document.getElementById("carousel-inner");
+myProducts[0].imgs.map((img, index) => {
+  const childSlide = document.createElement("div");
+  childSlide.classList.add("carousel-item");
+  if (index === 0) {
+    childSlide.classList.add("active");
+  }
+  childSlide.innerHTML = `<img
+                    src=${img}
+                    class="d-block w-100"
+                  />`;
+  slides.appendChild(childSlide);
 });
