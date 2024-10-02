@@ -6,11 +6,10 @@ let myProducts = [
     collection: "SAATHI",
     category: "Short Kurtis",
     imgs: [
-      "https://i.ibb.co/xFHNfpy/2.jpg",
-      "https://i.ibb.co/9TD2kHv/1-black-dress.jpg",
-      "https://i.ibb.co/ChQw18R/3-cream-dress.jpg",
-      "https://i.ibb.co/6Rq0mVB/5.jpg",
-      "https://i.ibb.co/vZGQRjC/8-pink-ruffledress.jpg",
+      "https://i.ibb.co/JyhJrdg/1-3.jpg",
+      "https://i.ibb.co/mN9hYwv/1-2.jpg",
+      "https://i.ibb.co/BP42fQY/1-1.jpg",
+      "https://i.ibb.co/d2T6w4c/1-black-dress.jpg",
     ],
   },
   {
@@ -19,6 +18,12 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    imgs: [
+      "https://i.ibb.co/6vHw627/2-3.jpg",
+      "https://i.ibb.co/r0V4fc1/2-2.jpg",
+      "https://i.ibb.co/tJ32Ntm/2-1.jpg",
+      "https://i.ibb.co/xFHNfpy/2.jpg",
+    ],
   },
   {
     id: 3,
@@ -26,6 +31,12 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    imgs: [
+      "https://i.ibb.co/hsTkHRZ/3-3.jpg",
+      "https://i.ibb.co/8McFqm6/3-2.jpg",
+      "https://i.ibb.co/BKJtC6P/3-1.jpg",
+      "https://i.ibb.co/ChQw18R/3-cream-dress.jpg",
+    ],
   },
   {
     id: 4,
@@ -41,6 +52,12 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    imgs: [
+      "https://i.ibb.co/18BvxtD/4-1.jpg",
+      "https://i.ibb.co/Zh01syg/4-3.jpg",
+      "https://i.ibb.co/Km9tt21/4-4.jpg",
+      "https://i.ibb.co/y5jhSHG/4-5.jpg",
+    ],
   },
   {
     id: 6,
@@ -48,6 +65,12 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    imgs: [
+      "https://i.ibb.co/WFPt1zN/5-1.jpg",
+      "https://i.ibb.co/tYKKJR5/5-2.jpg",
+      "https://i.ibb.co/0n2MdV8/5-3.jpg",
+      "https://i.ibb.co/7J0tX84/5.jpg",
+    ],
   },
   {
     id: 7,
@@ -55,6 +78,12 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    imgs: [
+      "https://i.ibb.co/p26htQf/6-3.jpg",
+      "https://i.ibb.co/zfpDX46/6-2.jpg",
+      "https://i.ibb.co/HrZBgyz/6-1.jpg",
+      "https://i.ibb.co/zbhMfTF/6.jpg",
+    ],
   },
   {
     id: 8,
@@ -62,6 +91,12 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    imgs: [
+      "https://i.ibb.co/Kq9wQRZ/7-1.jpg",
+      "https://i.ibb.co/HNN8y8V/7-2.jpg",
+      "https://i.ibb.co/6tKg9fd/7-3.jpg",
+      "https://i.ibb.co/3cVBrPc/7.jpg",
+    ],
   },
   {
     id: 9,
@@ -69,6 +104,12 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    imgs: [
+      "https://i.ibb.co/MGgxPL3/8-1.jpg",
+      "https://i.ibb.co/B4dbP75/8-3.jpg",
+      "https://i.ibb.co/VLwdzmX/8-2.jpg",
+      "https://i.ibb.co/vZGQRjC/8-pink-ruffledress.jpg",
+    ],
   },
   {
     id: 10,
@@ -76,6 +117,12 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    imgs: [
+      "https://i.ibb.co/KVRTSWB/17-2.jpg",
+      "https://i.ibb.co/zhK6wXP/17-1.jpg",
+      "https://i.ibb.co/Z2CQ6RK/17-3.jpg",
+      "https://i.ibb.co/pyGpMsF/17.jpg",
+    ],
   },
   {
     id: 11,
@@ -83,6 +130,12 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    imgs: [
+      "https://i.ibb.co/THVvXqD/9-3.jpg",
+      "https://i.ibb.co/Dg0rGYX/9-2.jpg",
+      "https://i.ibb.co/nrzJ6ZQ/9-1.jpg",
+      "https://i.ibb.co/cyTFHrB/9-blue-ikat-dress.jpg",
+    ],
   },
   {
     id: 12,
@@ -90,6 +143,12 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    imgs: [
+      "https://i.ibb.co/KV84GD6/11-3.jpg",
+      "https://i.ibb.co/ZMqrfnh/11-2.jpg",
+      "https://i.ibb.co/Kr3tRCN/11-1.jpg",
+      "https://i.ibb.co/V29Hk37/11-orange-dress.jpg",
+    ],
   },
   {
     id: 13,
@@ -97,6 +156,12 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    imgs: [
+      "https://i.ibb.co/VJZxJKW/12-2.jpg",
+      "https://i.ibb.co/1nbTrJn/12-3.jpg",
+      "https://i.ibb.co/0FSJRk7/12-1.jpg",
+      "https://i.ibb.co/c32PCcJ/12-orange-collar.jpg",
+    ],
   },
   {
     id: 14,
@@ -104,6 +169,12 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    imgs: [
+      "https://i.ibb.co/NyfRWct/10-1.jpg",
+      "https://i.ibb.co/vzP6RmL/10-3.jpg",
+      "https://i.ibb.co/t8xz0v9/10-2.jpg",
+      "https://i.ibb.co/2S2ZSdk/10-red-plain-dress.jpg",
+    ],
   },
   {
     id: 15,
@@ -111,6 +182,12 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    imgs: [
+      "https://i.ibb.co/R7KvNvP/13.jpg",
+      "https://i.ibb.co/2hWQGsp/13-1.jpg",
+      "https://i.ibb.co/g7M1K9N/13-2.jpg",
+      "https://i.ibb.co/wdtLHmF/13-4.jpg",
+    ],
   },
   {
     id: 16,
@@ -118,6 +195,12 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    imgs: [
+      "https://i.ibb.co/PGrzKtc/14-1.jpg",
+      "https://i.ibb.co/LCSMBK6/14-2.jpg",
+      "https://i.ibb.co/XspHf74/14-3.jpg",
+      "https://i.ibb.co/YtWMjkm/14-yeloow-overlap.jpg",
+    ],
   },
   {
     id: 17,
