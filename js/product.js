@@ -46,6 +46,11 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    imgs: [
+      "https://i.ibb.co/DbhZYk3/IMG-4764.jpg",
+      "https://i.ibb.co/rwzFWdB/IMG-4763.jpg",
+      "https://i.ibb.co/b7BH9sm/Primary-image-18-optimized-1000.jpg",
+    ],
   },
   {
     id: 5,
@@ -209,6 +214,12 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    imgs: [
+      "https://i.ibb.co/dMGpxqJ/IMG-4727.jpg",
+      "https://i.ibb.co/zxzTL8J/IMG-4728.jpg",
+      "https://i.ibb.co/JBhV3Bp/IMG-4732.jpg",
+      "https://i.ibb.co/HrFHFCm/15.jpg",
+    ],
   },
   {
     primaryImage: "https://i.ibb.co/ykhRY87/16.jpg",
@@ -216,6 +227,12 @@ let myProducts = [
     collection: "SAATHI",
     category: "Short Kurtis",
     id: 18,
+    imgs: [
+      "https://i.ibb.co/ZH6dJR0/IMG-4748.jpg",
+      "https://i.ibb.co/5WM13Gd/IMG-4756.jpg",
+      "https://i.ibb.co/gwzWyBx/IMG-4749.jpg",
+      "https://i.ibb.co/ykhRY87/16.jpg",
+    ],
   },
   {
     primaryImage: "https://i.ibb.co/fGFrpW3/Primary-image.jpg",
@@ -321,6 +338,12 @@ let myProducts = [
     collection: "MEHEK",
     category: "Long Onepiece",
     id: 33,
+    imgs: [
+      "https://i.ibb.co/M69Qms5/IMG-9902.jpg",
+      "https://i.ibb.co/bWKCy4J/IMG-9929.jpg",
+      "https://i.ibb.co/ypXMSx0/IMG-9895.jpg",
+      "https://i.ibb.co/h8ThJzn/8.jpg",
+    ],
   },
   {
     primaryImage: "https://i.ibb.co/10JRVFh/3.jpg",
@@ -328,6 +351,11 @@ let myProducts = [
     collection: "MEHEK",
     category: "Short Onepiece",
     id: 34,
+    imgs: [
+      "https://i.ibb.co/KybnDq6/IMG-9955.jpg",
+      "https://i.ibb.co/10JRVFh/3.jpg",
+      "https://i.ibb.co/RHdW2zy/IMG-0122.jpg",
+    ],
   },
   {
     primaryImage: "https://i.ibb.co/YdfWHVJ/7.jpg",
@@ -335,6 +363,13 @@ let myProducts = [
     collection: "MEHEK",
     category: "Long Onepiece",
     id: 35,
+    imgs: [
+      "https://i.ibb.co/0pNBBvd/IMG-9733.jpg",
+      "https://i.ibb.co/rk4Q7vL/IMG-9795.jpg",
+      "https://i.ibb.co/hHjCQKq/IMG-9734.jpg",
+      "https://i.ibb.co/qyGk7dW/IMG-9788.jpg",
+      "https://i.ibb.co/ggxtPts/IMG-9789.jpg",
+    ],
   },
   {
     primaryImage: "https://i.ibb.co/Jtx4zsw/6.jpg",
@@ -342,6 +377,12 @@ let myProducts = [
     collection: "MEHEK",
     category: "Long Onepiece",
     id: 36,
+    imgs: [
+      "https://i.ibb.co/G9GnZLp/IMG-9894.jpg",
+      "https://i.ibb.co/KKjCS4N/IMG-9883.jpg",
+      "https://i.ibb.co/4fP9G4w/IMG-9886.jpg",
+      "https://i.ibb.co/KKjCS4N/IMG-9883.jpg",
+    ],
   },
   {
     primaryImage: "https://i.ibb.co/RHfpfsc/5.jpg",
@@ -349,6 +390,11 @@ let myProducts = [
     collection: "MEHEK",
     category: "Long Onepiece",
     id: 37,
+    imgs: [
+      "https://i.ibb.co/JkZFMkh/IMG-9875.jpg",
+      "https://i.ibb.co/99BVp7r/IMG-9906.jpg",
+      "https://i.ibb.co/nmX0My9/IMG-9914.jpg",
+    ],
   },
   {
     primaryImage: "https://i.ibb.co/p14Qzht/4.jpg",
@@ -356,6 +402,12 @@ let myProducts = [
     collection: "MEHEK",
     category: "Long Onepiece",
     id: 38,
+    imgs: [
+      "https://i.ibb.co/4KB2dsM/IMG-9755.jpg",
+      "https://i.ibb.co/Cs0qTVK/IMG-9780.jpg",
+      "https://i.ibb.co/2WLNdTY/IMG-9783.jpg",
+      "https://i.ibb.co/p14Qzht/4.jpg",
+    ],
   },
   {
     primaryImage: "https://i.ibb.co/9pbH6s0/2.jpg",
@@ -363,6 +415,12 @@ let myProducts = [
     collection: "MEHEK",
     category: "Short Onepiece",
     id: 39,
+    imgs: [
+      "https://i.ibb.co/C839hSG/IMG-9994.jpg",
+      "https://i.ibb.co/xHxQWsH/IMG-0054.jpg",
+      "https://i.ibb.co/vcdmLvb/IMG-0011.jpg",
+      "https://i.ibb.co/jZyJRpS/IMG-0013.jpg",
+    ],
   },
   {
     primaryImage: "https://i.ibb.co/VVt2Y0t/1.jpg",
@@ -370,6 +428,13 @@ let myProducts = [
     collection: "MEHEK",
     category: "Short Onepiece",
     id: 40,
+    imgs: [
+      "https://i.ibb.co/n6Vb6HR/IMG-0033.jpg",
+      "https://i.ibb.co/27fTV8n/IMG-9982.jpg",
+      "https://i.ibb.co/0j95dkx/IMG-9984.jpg",
+      "https://i.ibb.co/m66J7zw/IMG-9979.jpg",
+      "https://i.ibb.co/d0LTcB1/IMG-9980.jpg",
+    ],
   },
   {
     primaryImage: "https://i.ibb.co/yFwD10D/9.jpg",
@@ -377,5 +442,11 @@ let myProducts = [
     collection: "MEHEK",
     category: "Long Onepiece",
     id: 41,
+    imgs: [
+      "https://i.ibb.co/qDHdF2Y/IMG-9840.jpg",
+      "https://i.ibb.co/c8wGqs7/IMG-9857.jpg",
+      "https://i.ibb.co/RTr8Btf/IMG-9859.jpg",
+      "https://i.ibb.co/mS3Bxwz/IMG-9860.jpg",
+    ],
   },
 ];

@@ -19,7 +19,7 @@ orderTableProduct.forEach((product, index) => {
     <td><h5>${product.category}</h5></td>
     <td>${product.collection}</td>
     <td>${product.price}</td>
-    <td><button class="remove-btn" style="display: block;" data-index="${index}">Remove</button></td>
+    <td><button class="remove-btn" style="display: inline-block;" data-index="${index}">Remove</button></td>
   `;
   console.log(rowItem.innerHTML);
   productTable.appendChild(rowItem);
