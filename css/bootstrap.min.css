@@ -1249,22 +1249,11 @@ a.close.disabled {
 }
 .carousel {
   position: relative;
+  width: fit-content;
 }
 .carousel.pointer-event {
   -ms-touch-action: pan-y;
   touch-action: pan-y;
-}
-.carousel-item {
-  position: relative;
-  display: none;
-  float: left;
-  width: 100%;
-  margin-right: -100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transition: -webkit-transform 0.6s ease-in-out;
-  transition: transform 0.6s ease-in-out;
-  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-item {
