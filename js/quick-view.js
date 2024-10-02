@@ -1,5 +1,14 @@
+// get selected product
+const urlParams = new URLSearchParams(window.location.search);
+const productId = urlParams.get("product");
+
+const selectedProduct = myProducts.filter(
+  (product) => product.id == productId
+)[0];
+
+// create carousel indicator
 const indicatorsContainer = document.getElementById("carousel-indicators");
-const totalSlides = myProducts[0].imgs.length;
+const totalSlides = selectedProduct.imgs.length;
 
 for (let i = 0; i < totalSlides; i++) {
   const indicatorButton = document.createElement("button");
@@ -7,7 +16,7 @@ for (let i = 0; i < totalSlides; i++) {
   indicatorButton.setAttribute("data-bs-target", "#carouselExampleIndicators");
   indicatorButton.setAttribute("data-bs-slide-to", i);
   indicatorButton.setAttribute("aria-label", `Slide ${i + 1}`);
-  
+
   if (i === 0) {
     indicatorButton.classList.add("active");
     indicatorButton.setAttribute("aria-current", "true");
@@ -16,8 +25,9 @@ for (let i = 0; i < totalSlides; i++) {
   indicatorsContainer.appendChild(indicatorButton);
 }
 
+// create image slides of product
 const slides = document.getElementById("carousel-inner");
-myProducts[0].imgs.map((img, index) => {
+selectedProduct.imgs.map((img, index) => {
   const childSlide = document.createElement("div");
   childSlide.classList.add("carousel-item");
   if (index === 0) {

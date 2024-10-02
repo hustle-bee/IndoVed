@@ -38,7 +38,7 @@ myProducts.forEach((product) => {
         <div onclick= addItemsToWishList(event) class="icon"><i class="icon_heart_alt icon-heart-background" ></i></div>
         <ul>
           <li onclick= addItemsToCart(event) class="w-icon active"><a><i class="icon_bag_alt"></i></a></li>
-          <li class="quick-view"><a href="quick-view.html">+ Quick View</a></li>
+          <li class="quick-view"><a href="quick-view.html?product=${product.id}">+ Quick View</a></li>
           <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
         </ul>
       </div>
@@ -56,7 +56,6 @@ function addItemsToCart(event) {
   event.preventDefault();
 
   const clickedElement = event.currentTarget;
-  console.log('clickedElement: ', clickedElement);
 
   const productId = clickedElement.closest(".product-item").dataset.productId;
   const selectedProduct = myProducts.find((product) => product.id == productId);
@@ -150,7 +149,7 @@ function filterCollection(selectedValue) {
         <div onclick= addItemsToWishList(event) class="icon"><i class="icon_heart_alt icon-heart-background" ></i></div>
         <ul>
           <li onclick= addItemsToCart(event) class="w-icon active"><a><i class="icon_bag_alt"></i></a></li>
-          <li class="quick-view"><a href="quick-view.html">+ Quick View</a></li>
+          <li class="quick-view"><a href="quick-view.html?product=${product.id}">+ Quick View</a></li>
           <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
         </ul>
       </div>
@@ -188,7 +187,7 @@ function filterCategory(selectedValue) {
         <div onclick= addItemsToWishList(event) class="icon"><i class="icon_heart_alt icon-heart-background" ></i></div>
         <ul>
           <li onclick= addItemsToCart(event) class="w-icon active"><a><i class="icon_bag_alt"></i></a></li>
-          <li class="quick-view"><a href="quick-view.html">+ Quick View</a></li>
+          <li class="quick-view"><a href="quick-view.html?product=${product.id}">+ Quick View</a></li>
           <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
         </ul>
       </div>

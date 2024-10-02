@@ -5,6 +5,7 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    // demo imgs
     imgs: [
       "https://i.ibb.co/JyhJrdg/1-3.jpg",
       "https://i.ibb.co/mN9hYwv/1-2.jpg",
