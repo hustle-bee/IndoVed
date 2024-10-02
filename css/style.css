@@ -136,8 +136,17 @@ ol {
   transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
 
-.carousel-inner{
+.carousel-inner {
   width: fit-content;
+}
+
+.remove-btn {
+  width: 100%;
+  text-align: center;
+  background: #ffb899;
+  color: white;
+  font-size: 14px;
+  border: none;
 }
 
 /*---------------------
@@ -684,7 +693,7 @@ ol {
   padding: 15px 30px 12px;
   margin-bottom: 10px;
 }
-.checkout-btn{
+.checkout-btn {
   width: 100%;
   text-align: center;
 }
@@ -4032,7 +4041,7 @@ ol {
   .single-hero-items {
     height: 725px;
   }
-  .carousel-item{
+  .carousel-item {
     width: 400px !important;
     height: auto;
   }
@@ -4045,7 +4054,7 @@ ol {
   .container {
     max-width: 1170px;
   }
-  .carousel-item{
+  .carousel-item {
     width: 400px !important;
     height: auto;
   }
@@ -4054,7 +4063,7 @@ ol {
 /* Medium Device: 1200px */
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .carousel-item{
+  .carousel-item {
     width: 400px !important;
     height: auto;
   }
@@ -4097,7 +4106,7 @@ ol {
 }
 
 @media only screen and (max-width: 991px) {
-  .carousel-item{
+  .carousel-item {
     width: 400px !important;
     height: auto;
   }
@@ -4161,7 +4170,7 @@ ol {
 /* Tablet Device: 768px */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .carousel-item{
+  .carousel-item {
     width: 400px !important;
     height: auto;
   }
@@ -4229,7 +4238,7 @@ ol {
 /* Large Device: 480px */
 
 @media only screen and (max-width: 767px) {
-  .carousel-item{
+  .carousel-item {
     margin: 0 auto;
     width: 100% !important;
     height: auto;
