@@ -5,6 +5,7 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    // demo imgs
     imgs: [
       "https://i.ibb.co/xFHNfpy/2.jpg",
       "https://i.ibb.co/9TD2kHv/1-black-dress.jpg",
@@ -41,6 +42,11 @@ let myProducts = [
     price: "RS.550",
     collection: "SAATHI",
     category: "Short Kurtis",
+    // demo imgs
+    imgs: [
+      "https://i.ibb.co/zbhMfTF/6.jpg",
+      "https://i.ibb.co/V29Hk37/11-orange-dress.jpg",
+    ],
   },
   {
     id: 6,
