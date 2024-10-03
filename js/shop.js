@@ -37,7 +37,6 @@ myProducts.forEach((product) => {
         <div class="sale pp-sale"></div>
         <div onclick= addItemsToWishList(event) class="icon"><i class="icon_heart_alt icon-heart-background" ></i></div>
         <ul>
-          <li onclick= addItemsToCart(event) class="w-icon active"><a><i class="icon_bag_alt"></i></a></li>
           <li class="quick-view"><a href="quick-view.html?product=${product.id}">+ Quick View</a></li>
           <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
         </ul>
@@ -148,7 +147,6 @@ function filterCollection(selectedValue) {
         <div class="sale pp-sale"></div>
         <div onclick= addItemsToWishList(event) class="icon"><i class="icon_heart_alt icon-heart-background" ></i></div>
         <ul>
-          <li onclick= addItemsToCart(event) class="w-icon active"><a><i class="icon_bag_alt"></i></a></li>
           <li class="quick-view"><a href="quick-view.html?product=${product.id}">+ Quick View</a></li>
           <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
         </ul>
@@ -186,7 +184,6 @@ function filterCategory(selectedValue) {
         <div class="sale pp-sale"></div>
         <div onclick= addItemsToWishList(event) class="icon"><i class="icon_heart_alt icon-heart-background" ></i></div>
         <ul>
-          <li onclick= addItemsToCart(event) class="w-icon active"><a><i class="icon_bag_alt"></i></a></li>
           <li class="quick-view"><a href="quick-view.html?product=${product.id}">+ Quick View</a></li>
           <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
         </ul>
