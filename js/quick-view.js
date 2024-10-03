@@ -71,9 +71,15 @@ function sizeClickedInQuickView(event) {
 
 // add to cart
 function addItemsToCartFromQuickView() {
-  const itemsAddedToCart =
-    JSON.parse(localStorage.getItem("itemsAddedToCart")) || [];
-  itemsAddedToCart.push(selectedProduct);
-  localStorage.setItem("itemsAddedToCart", JSON.stringify(itemsAddedToCart));
-  updateCartCount();
+  const message = document.getElementById("message");
+  if (selectedProduct.size) {
+    const itemsAddedToCart =
+      JSON.parse(localStorage.getItem("itemsAddedToCart")) || [];
+    itemsAddedToCart.push(selectedProduct);
+    localStorage.setItem("itemsAddedToCart", JSON.stringify(itemsAddedToCart));
+    updateCartCount();
+    message.innerText = "Added in cart";
+  } else {
+    message.innerText = "Please select size";
+  }
 }

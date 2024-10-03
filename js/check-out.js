@@ -49,6 +49,7 @@ document.addEventListener("click", function (e) {
     orderTableProduct.splice(index, 1);
     localStorage.setItem("itemsAddedToCart", JSON.stringify(orderTableProduct));
     e.target.closest("li").remove();
+    updateCartCount();
     console.log("Item removed from cart");
   }
 });
