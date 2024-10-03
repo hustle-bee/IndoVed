@@ -199,10 +199,16 @@
     /*-------------------
 		Radio Btn
 	--------------------- */
-    $(".fw-size-choose .sc-item label, .pd-size-choose .sc-item label").on('click', function () {
-        $(".fw-size-choose .sc-item label, .pd-size-choose .sc-item label").removeClass('active');
-        $(this).addClass('active');
-    });
+    $(".fw-size-choose, .pd-size-choose").on(
+        "click",
+        ".sc-item label",
+        function () {
+          $(
+            ".fw-size-choose .sc-item label, .pd-size-choose .sc-item label"
+          ).removeClass("active");
+          $(this).addClass("active");
+        }
+      );
     
     /*-------------------
 		Nice Select
