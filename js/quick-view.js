@@ -20,7 +20,7 @@ sizes.forEach((size) => {
   const sizeOptionHTML = `
     <div class="sc-item">
       <input type="radio" id="${size}-size" name="size">
-      <label for="${size}-size">${size}</label>
+      <label for="${size}-size" onclick=sizeClickedInQuickView(event) >${size}</label>
     </div>
   `;
 
@@ -62,3 +62,24 @@ selectedProduct.imgs.map((img, index) => {
                   />`;
   slides.appendChild(childSlide);
 });
+
+// select size
+function sizeClickedInQuickView(event) {
+  const clickedLabel = event.target;
+  selectedProduct.size = clickedLabel.innerText;
+}
+
+// add to cart
+function addItemsToCartFromQuickView() {
+  const message = document.getElementById("message");
+  if (selectedProduct.size) {
+    const itemsAddedToCart =
+      JSON.parse(localStorage.getItem("itemsAddedToCart")) || [];
+    itemsAddedToCart.push(selectedProduct);
+    localStorage.setItem("itemsAddedToCart", JSON.stringify(itemsAddedToCart));
+    updateCartCount();
+    message.innerText = "Added in cart";
+  } else {
+    message.innerText = "Please select size";
+  }
+}
