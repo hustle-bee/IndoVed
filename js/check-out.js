@@ -51,9 +51,10 @@ document.addEventListener("click", function (e) {
     e.target.closest("li").remove();
     console.log("Item removed from cart");
   }
+  updateTotalPrice();
 });
 
-if (orderTableProduct) {
+function updateTotalPrice() {
   let total = 0;
   orderTableProduct.forEach((product) => {
     let price = parseInt(product.price.replace("RS.", ""));
