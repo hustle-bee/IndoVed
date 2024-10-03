@@ -10,16 +10,36 @@ orderTableProduct.forEach((product) => {
   listItem.classList.add("fw-normal");
 
   listItem.innerHTML = `
-    <div class="product-item" id="product-item" data-product-id="${product.id}">
-             <img style="height:200px" class="primary-image" src="${product.primaryImage}" alt="${product.collection}"/>
+   <div class="product-item" id="product-item" data-product-id="${
+     product.id
+   }" style="display: flex; justify-content: space-between; align-items: center; padding-right:50px;">
+     
+      <div class="product-details" style="flex: 1; display: flex; align-items: center;">
+        <img style="height:200px; margin-right: 20px;" class="primary-image" src="${
+          product.primaryImage
+        }" alt="${product.collection}"/>
+        <div class="pi-text">
+          <div class="catagory-name" style=" display:block;text-align:left;">${
+            product.category
+          }</div>
+        </div>
+      </div>
 
-      <div class="pi-text" style="display:flex; justify-content:space-between; align-items:center;" >
-        <div class="catagory-name" style=" display:block;text-align:left;padding:5px; margin:left; ">${product.category}</div>
-        <div class="product-price" style=" text-align:right; font-size:15px ;">${product.price}</div>
-        <div><button class="remove-btn" data-product-id="${product.id}">Remove</button></div>
+      
+      <div class="product-actions" style="flex: 1; display: flex; flex-direction: column; align-items: baseline; text-align: center; padding-left:150px;">
+        <div class="product-size" style="margin-bottom: 10px;">Size: ${
+          product.size || "M"
+        }</div> 
+        <div class="product-price" style="font-size: 15px; margin-bottom: 10px;">${
+          product.price
+        }</div>
+        <div><button class="remove-btn" data-product-id="${
+          product.id
+        }" style="padding: 5px 10px;">Remove</button></div>
       </div>
     </div>
   `;
+
   productTable.appendChild(listItem);
 });
 document.addEventListener("click", function (e) {
