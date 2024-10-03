@@ -28,7 +28,7 @@ orderTableProduct.forEach((product) => {
       
       <div class="product-actions" style="flex: 1; display: flex; flex-direction: column; align-items: baseline; text-align: center; padding-left:150px;">
         <div class="product-size" style="margin-bottom: 10px;">Size: ${
-          product.size || "M"
+          product.size || ""
         }</div> 
         <div class="product-price" style="font-size: 15px; margin-bottom: 10px;">${
           product.price
