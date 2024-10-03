@@ -2029,7 +2029,7 @@ ol {
 
 .filter-widget .fw-size-choose .sc-item {
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .filter-widget .fw-size-choose .sc-item:last-child {

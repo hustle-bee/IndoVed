@@ -6,6 +6,29 @@ const selectedProduct = myProducts.filter(
   (product) => product.id == productId
 )[0];
 
+// show size section
+const sizes =
+  selectedProduct.collection == "MERAKI"
+    ? ["s", "m", "l"]
+    : ["s", "m", "l", "xl"];
+const sizeContainer = document.getElementById("fw-size-choose");
+sizeContainer.innerHTML = "";
+const fragment = document.createDocumentFragment();
+const tempDiv = document.createElement("div");
+
+sizes.forEach((size) => {
+  const sizeOptionHTML = `
+    <div class="sc-item">
+      <input type="radio" id="${size}-size" name="size">
+      <label for="${size}-size">${size}</label>
+    </div>
+  `;
+
+  tempDiv.innerHTML = sizeOptionHTML;
+  fragment.appendChild(tempDiv.firstElementChild);
+});
+sizeContainer.appendChild(fragment);
+
 // create carousel indicator
 const indicatorsContainer = document.getElementById("carousel-indicators");
 const totalSlides = selectedProduct.imgs.length;
