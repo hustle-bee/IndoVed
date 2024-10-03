@@ -149,6 +149,22 @@ ol {
   border: none;
 }
 
+.inner-header-right {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner-header-right .indoved-label {
+  height: 50px;
+}
+.inner-header-left {
+  vertical-align: top;
+}
+
+.inner-header-left .indoved-label {
+  height: 45px;
+}
+
 /*---------------------
   Helper CSS
 -----------------------*/
@@ -434,8 +450,12 @@ ol {
   padding: 39px 0;
 }
 
+.inner-header-left {
+  display: flex;
+}
+
 .inner-header .logo {
-  padding: 12px 0;
+  padding: 6px 0;
 }
 
 .inner-header .logo a {
@@ -4032,6 +4052,9 @@ ol {
   .inner-header .advanced-search .input-group button {
     right: -14px;
   }
+  .inner-header-left .indoved-label {
+    display: none;
+  }
   .product-item .pi-pic ul li a {
     padding: 16px 12px 12px 11px;
   }
@@ -4048,6 +4071,9 @@ ol {
 }
 
 @media only screen and (min-width: 1200px) {
+  .inner-header-left .indoved-label {
+    display: none;
+  }
   .single-hero-items {
     height: 725px;
   }
@@ -4063,6 +4089,9 @@ ol {
 /* Medium Device: 1200px */
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .inner-header-left .indoved-label {
+    display: none;
+  }
   .carousel-item {
     width: 400px !important;
     height: auto;
@@ -4106,6 +4135,9 @@ ol {
 }
 
 @media only screen and (max-width: 991px) {
+  .inner-header-left .indoved-label {
+    display: none;
+  }
   .carousel-item {
     width: 400px !important;
     height: auto;
@@ -4170,6 +4202,9 @@ ol {
 /* Tablet Device: 768px */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .inner-header-left .indoved-label {
+    display: none;
+  }
   .carousel-item {
     width: 400px !important;
     height: auto;
@@ -4238,6 +4273,29 @@ ol {
 /* Large Device: 480px */
 
 @media only screen and (max-width: 767px) {
+
+  .inner-header .logo {
+    padding: 12px 0;
+  }
+
+  .inner-header-right {
+    justify-content: end;
+  }
+
+  .inner-header-right .indoved-label {
+    display: none;
+  }
+
+  .inner-header-left {
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+  }
+
+  .inner-header-left .indoved-label {
+    display: flex;
+  }
+
   .carousel-item {
     margin: 0 auto;
     width: 100% !important;
@@ -4391,6 +4449,29 @@ ol {
 /* Small Device: 320px */
 
 @media only screen and (max-width: 479px) {
+
+  .inner-header .logo {
+    padding: 12px 0;
+  }
+  
+  .inner-header-right {
+    justify-content: end;
+  }
+
+  .inner-header-right .indoved-label {
+    display: none;
+  }
+
+  .inner-header-left {
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+  }
+
+  .inner-header-left .indoved-label {
+    display: flex;
+  }
+
   .instagram-photo .insta-item {
     width: 100%;
   }
