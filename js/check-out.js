@@ -16,7 +16,7 @@ orderTableProduct.forEach((product, index) => {
    }" style="display: flex; justify-content: space-between; align-items: center; padding-right:50px;">
      
       <div class="product-details" style="flex: 1; display: flex; align-items: center;">
-        <img style="height:200px; margin-right: 20px;" class="primary-image" src="${
+        <img style="margin-right: 20px;" class="primary-image" src="${
           product.primaryImage
         }" alt="${product.collection}"/>
         <div class="pi-text">
