@@ -4146,7 +4146,7 @@ ol {
     height: 450px;
   }
   .banner-section {
-    padding: 80px 0 10px;
+    padding: 10px 0 10px;
   }
   .single-banner {
     margin-bottom: 30px;
@@ -4273,6 +4273,10 @@ ol {
 /* Large Device: 480px */
 
 @media only screen and (max-width: 767px) {
+  .shop-now {
+    display: none;
+  }
+
   .inner-header .logo {
     padding: 12px 0;
   }
@@ -4445,6 +4449,9 @@ ol {
 /* Small Device: 320px */
 
 @media only screen and (max-width: 479px) {
+  .shop-now {
+    display: none;
+  }
 
   .single-hero-items {
     height: auto;
