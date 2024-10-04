@@ -910,7 +910,7 @@ ol {
   width: auto;
   /* height: 725px; */
   padding-top: 210px;
-  margin: 30px;
+  margin: 10px;
 }
 .hero-section {
   padding: 20px;
@@ -4273,7 +4273,6 @@ ol {
 /* Large Device: 480px */
 
 @media only screen and (max-width: 767px) {
-
   .inner-header .logo {
     padding: 12px 0;
   }
@@ -4384,15 +4383,12 @@ ol {
   .hero-section {
     padding: 10px;
   }
-  .single-hero-items {
-    width: 100%;
-    height: auto;
-  }
-
   .hero-items .single-hero-items {
     padding: 110px 25px 80px;
-    max-height: 230px;
     background: round;
+  }
+  .single-hero-items {
+    height: 340px;
   }
   .hero-items .single-hero-items h1 {
     font-size: 40px;
@@ -4450,10 +4446,14 @@ ol {
 
 @media only screen and (max-width: 479px) {
 
+  .single-hero-items {
+    height: auto;
+  }
+
   .inner-header .logo {
     padding: 12px 0;
   }
-  
+
   .inner-header-right {
     justify-content: end;
   }
