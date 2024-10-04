@@ -1,10 +1,11 @@
 var ordertable = localStorage.getItem("itemsAddedToCart");
 if (ordertable) {
   var orderTableProduct = JSON.parse(ordertable);
+  updateTotalPrice();
 }
 
 var productTable = document.getElementById("ordertable");
-orderTableProduct.forEach((product) => {
+orderTableProduct.forEach((product, index) => {
   const listItem = document.createElement("li");
 
   listItem.classList.add("fw-normal");
@@ -33,28 +34,17 @@ orderTableProduct.forEach((product) => {
         <div class="product-price" style="font-size: 15px; margin-bottom: 10px;">${
           product.price
         }</div>
-        <div><button class="remove-btn" data-product-id="${
-          product.id
-        }" style="padding: 5px 10px;">Remove</button></div>
-      </div>
-    </div>
-  `;
+        <div><button class="remove-btn" product-index="${index}" data-product-id="${
+    product.id
+  }" style="padding: 5px 10px;">Remove</button></div>
+        </div>
+        </div>
+        `;
 
   productTable.appendChild(listItem);
 });
-document.addEventListener("click", function (e) {
-  if (e.target && e.target.classList.contains("remove-btn")) {
-    const productId = parseInt(e.target.getAttribute("data-product-id"));
-    const index = e.target.getAttribute("data-index");
-    orderTableProduct.splice(index, 1);
-    localStorage.setItem("itemsAddedToCart", JSON.stringify(orderTableProduct));
-    e.target.closest("li").remove();
-    updateCartCount();
-    console.log("Item removed from cart");
-  }
-});
 
-if (orderTableProduct) {
+function updateTotalPrice() {
   let total = 0;
   orderTableProduct.forEach((product) => {
     let price = parseInt(product.price.replace("RS.", ""));
@@ -62,6 +52,17 @@ if (orderTableProduct) {
   });
   document.getElementById("total-price").textContent = `Total RS: ${total}`;
 }
+
+document.addEventListener("click", function (e) {
+  if (e.target && e.target.classList.contains("remove-btn")) {
+    const productIndex = e.target.getAttribute("product-index");
+    orderTableProduct.splice(productIndex, 1);
+    localStorage.setItem("itemsAddedToCart", JSON.stringify(orderTableProduct));
+    e.target.closest("li").remove();
+    updateTotalPrice();
+    updateCartCount();
+  }
+});
 
 // order placed pop up
 const openPopupBtn = document.getElementById("openPopupBtn");
