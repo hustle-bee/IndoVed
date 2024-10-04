@@ -69,14 +69,18 @@ function sizeClickedInQuickView(event) {
   selectedProduct.size = clickedLabel.innerText;
 }
 
+let cartItems = [];
+const storageCartItems = localStorage.getItem("itemsAddedToCart");
+if (storageCartItems) {
+  cartItems = JSON.parse(storageCartItems);
+}
+
 // add to cart
 function addItemsToCartFromQuickView() {
   const message = document.getElementById("message");
   if (selectedProduct.size) {
-    const itemsAddedToCart =
-      JSON.parse(localStorage.getItem("itemsAddedToCart")) || [];
-    itemsAddedToCart.push(selectedProduct);
-    localStorage.setItem("itemsAddedToCart", JSON.stringify(itemsAddedToCart));
+    cartItems.push(selectedProduct);
+    localStorage.setItem("itemsAddedToCart", JSON.stringify(cartItems));
     updateCartCount();
     message.innerText = "Added in cart";
   } else {
