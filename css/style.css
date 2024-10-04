@@ -4273,6 +4273,10 @@ ol {
 /* Large Device: 480px */
 
 @media only screen and (max-width: 767px) {
+  .shop-now {
+    display: none;
+  }
+
   .inner-header .logo {
     padding: 12px 0;
   }
@@ -4445,6 +4449,9 @@ ol {
 /* Small Device: 320px */
 
 @media only screen and (max-width: 479px) {
+  .shop-now {
+    display: none;
+  }
 
   .single-hero-items {
     height: auto;
