@@ -4135,6 +4135,9 @@ ol {
 }
 
 @media only screen and (max-width: 991px) {
+  .product-shop {
+    padding: 0px;
+  }
   .inner-header-left .indoved-label {
     display: none;
   }
@@ -4263,7 +4266,7 @@ ol {
   }
   .blog-sidebar,
   .produts-sidebar-filter {
-    padding-top: 50px;
+    padding-top: 20px;
   }
   .checkout-content input {
     margin-top: 50px;
@@ -4439,7 +4442,7 @@ ol {
   }
   .blog-sidebar,
   .produts-sidebar-filter {
-    padding-top: 50px;
+    padding-top: 20px;
   }
   .checkout-content input {
     margin-top: 50px;
